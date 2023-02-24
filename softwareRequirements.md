@@ -23,3 +23,9 @@ The user's score will be locally stored and displayed on a scoreboard page, wher
 
 Although we can make the webpage responsive so that it adjusts with device screen size so that it can be played on various devices, our application will be limited to being exclusively a web browser game rather than an IOS or Android app.
 
+Minimum Viable Product vs
+What will your MVP functionality be?
+A functional quiz with 10 questions, 5 possible answers. An about us page. A scoreboard page with persisting data stored locally and displayed on the page. 
+
+What are your stretch goals?
+We are going to have to use CSS styling with our DOM manipulation. Our aim is to have our application be visually appealing so that it attracts users.
