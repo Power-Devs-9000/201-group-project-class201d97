@@ -7,7 +7,9 @@ Our project is a quiz style matching game.  We will present the user with a ques
 
 ## User Stories
 
+- 5 user stories were generated and placed in our project management board
 
+[User Stories](https://github.com/orgs/Power-Devs-9000/projects/1)
 
 ## WireFrames
 
@@ -21,3 +23,4 @@ Our project is a quiz style matching game.  We will present the user with a ques
 
 ## Domain Model
 
+![201-GroupProject-Domain Modeling](https://user-images.githubusercontent.com/109825175/221320559-000b50fe-13fc-4634-be9f-878e136ec734.png)
