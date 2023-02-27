@@ -1,0 +1,31 @@
+header{
+  text-align: center;
+}
+
+#darshon-section > img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+#logan-section > img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+
+#ryan-section > img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+#reece-section > img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+body {
+  background-image: linear-gradient(#f1c50e, #db545a);
+}
