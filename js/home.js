@@ -2,15 +2,15 @@
 
 //********** GLOBAL VARIABLES*/
 let renderData = {
-  one:{
-  questionOne: 'This is our first test question',
+  one: {
+    questionOne: 'This is our first test question',
     questionOnechoices: ['a', 'b', 'c', 'd']
-},
+  },
 
- two:{
-  question: 'Q2',
+  two: {
+    question: 'Q2',
     questionTwochoices: ['a2, b2, c2, d2']
-}
+  }
 };
 
 let attempts = 0;
@@ -27,9 +27,9 @@ function User(name) {
 
 !// RANDOM Q start-ish
 
-  function randomQ() {
-    return Math.floor(Math.random() * renderData.length);
-  }
+function randomQ() {
+  return Math.floor(Math.random() * renderData.length);
+};
 
 // function renderQuestion() {
 //   while (renderData.length < 5) {
@@ -53,9 +53,9 @@ function renderAnswers() {
   let answerRow = document.createElement('tr');
   answers.appendChild(answerRow);
 
-  for (let i = 0; i < renderData.questionOnechoices.length; i++) {
+  for (let i = 0; i < renderData.one.questionOnechoices.length; i++) {
     let answerChoices = document.createElement('td');
-    answerChoices.textContent = renderData.questionOnechoices[i];
+    answerChoices.textContent = renderData.one.questionOnechoices[i];
     answerRow.appendChild(answerChoices);
 
   }
@@ -83,7 +83,7 @@ for (let i = 0; i < answers.length; i++) {
   if (question === answers[i].questionOnechoices) { }
 }
 //*** EVENT HANDLER*** */
-let ansSelected = event.target.questionOnechoices
+// let ansSelected = event.target.questionOnechoices
 
 //********** EXECUTABLE CODE */
 
