@@ -1,0 +1,64 @@
+body {
+  background-image: linear-gradient(#f1c50e, #db545a);
+}
+header{
+  text-align: center;
+}
+/* img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+} */
+#darshon-section > img{
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  
+}
+
+#logan-section > img {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  
+}
+
+
+#ryan-section > img {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+}
+
+#reece-section > img {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+
+}
+div{
+  display: flex;
+  padding-top: 10px;
+}
+.author-info{
+  font-size: 2em;
+  font-weight:500;
+  text-align: center;
+  width: fit-content;
+  word-wrap:normal;
+  width: 50%;
+  margin: auto;
+  position: relative; 
+  border-style: solid;
+  border-width: 2px;
+  border-image: linear-gradient(
+    hsl(224, 85%, 66%),
+    hsl(269, 85%, 66%),
+    hsl(314, 85%, 66%),
+    hsl(359, 85%, 66%),
+    hsl(44, 85%, 66%),
+    hsl(89, 85%, 66%),
+    hsl(134, 85%, 66%),
+    hsl(179, 85%, 66%)
+  ) 1;
+}
