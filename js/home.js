@@ -19,7 +19,7 @@ function User(name) {
 
 
 //********** HELPER FUNCTIONS*/
-function renderQuestion(){
+function renderQuestion() {
   let questionDisplay = document.createElement('h1');
   questionDisplay.textContent = renderData.questionOne;
   question.appendChild(questionDisplay);
@@ -60,4 +60,49 @@ function renderAnswers() {
 
 renderQuestion();
 renderAnswers();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
