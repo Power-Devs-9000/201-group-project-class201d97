@@ -15,6 +15,8 @@ Our project is a quiz style matching game.  We will present the user with a ques
 
 ![201-GroupProject-main](https://user-images.githubusercontent.com/109825175/221308758-4623b533-5a2e-4afa-b057-cd2ea359f298.png)
 
+- Updated placement of links to be at top of page instead for easier readability
+
 ![201-GroupProject-AboutUs](https://user-images.githubusercontent.com/109825175/221310207-59ed2491-e138-427f-bd04-a94bb021c989.png)
 
 ![201-GroupProject-ScorePage](https://user-images.githubusercontent.com/109825175/221313488-a5f80435-793f-48b6-b1e1-b7375789f7a0.png)
