@@ -8,12 +8,16 @@ let questionList = {
   },
 
   two: {
-    question: 'Q2',
-    questionTwochoices: ['a2, b2, c2, d2']
+    question: 'What would be the shorthand version of... const welcome = "You have logged in as " + first +" "+ last +" ".',
+    
+    questionChoices: [a ='`You + have logged + in as + First + Last',b = 'You have logged in as.exe.shorthand',c = '`You have logged in as ${first} ${last}`',d = 'You have logged in as + "const.welcome" + "."' ],
+    correct: 'c'
+
   },
 
 
   three: {
+
     question: 'You have declared a function that takes in an array of numbers and returns the sum of those numbers. How do you get your function to run?',
     questionTwochoices: ['You send your entire fist through your monitor.', 'You have to get on spotify and play "Call Me, Maybe" by Carly Rae Jepsen on repeat.', 'The code inside of the function is automatically executed after the function has been defined.', 'The function must be called upon with a given set of arguments.'],
     correct: 'The function must be called upon with a given set of arguments.'
