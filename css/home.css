@@ -20,6 +20,12 @@ nav {
   transition: .4s;
 }
 
+ul {
+  text-align: center;
+    margin-left: 1%;
+    margin-right: 3.5%;
+  }
+
 .Section1 {
   background:url(/img/img4.jpg);
   background-size:cover;
@@ -62,15 +68,13 @@ table td {
   padding:5px;
 }
 
-footer {
-  background-color: linear-gradient(#f1c50e, #db545a);
-}
-
 fieldset {
   background-color: black;
   color:white;
 }
 
-form {
-padding-top: 1%;
+legend {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
 }
