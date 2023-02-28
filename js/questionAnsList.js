@@ -2,8 +2,8 @@
 // variable being called on reece.js
 let questionList = {
   one: {
-    question: 'This is our first test question',
-    questionChoices: ['a', 'b', 'c', 'd','e'],
+    question: 'What does HTML stand for?',
+    questionChoices: [a='Hyper Text Multiple Listing', b='Hyper Text Mark Up Language', c='Hyper Text Machine Lingo', d='Hyper Text Mass Linux','Hovering Text Manipulation Language'],
     correct: 'b'
   },
 
@@ -51,13 +51,13 @@ let questionList = {
     correct: 'a2'
   },
   nine: {
-    question: 'Q5',
-    questionChoices: ['a2', 'b2', 'c2', 'd2','e2'],
-    correct: 'a2'
+    question: 'The h1 tag is used to create:',
+    questionChoices: [a='Paragraphs', b='Colors', c='Cookies', d='Headings', e='Text'],
+    correct: 'd'
   },
   ten: {
-    question: 'Q5',
-    questionChoices: ['a2', 'b2', 'c2', 'd2','e2'],
-    correct: 'a2'
+    question: 'Which property specifies the color of a border?',
+    questionChoices: [a=':border-color', b=':border-witdth', c=':border-style', d='border-line-color', e='border-rgb'],
+    correct: 'a'
   }
 };
