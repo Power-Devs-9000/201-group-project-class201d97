@@ -65,8 +65,8 @@ function handleFormSubmit(event) {
 // attempts --; // decrease the number of attempts by 1
 // render function
 
-//********** LOCAL STORAGE STARTS HERE **********
-//TODO: Convert data to a string and store it in local storage
+// ********** LOCAL STORAGE STARTS HERE **********
+// TODO: Convert data to a string and store it in local storage
 // if (attempts === 0) {
 // solutionContainer.removeEventListener('click', handler); // remove event listener
 // let stringifiedUsers = JSON.stringify(playerArray);
