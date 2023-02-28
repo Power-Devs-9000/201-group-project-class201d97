@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scoreboard</title>
-  <link rel="score-board" href="score-board.html">
-
+  <title>Score Board</title>
+  <link rel="score-board" href="pages/score-board.html">
+  <link rel="stylesheet" href="css/score-board.css"> 
 </head>
+
 <body>
   <header>
-    <nav class = "score-container">
-      <div id="username"></div>
-      <div id="saveuserBtn"></div>
-      <div id="finalScore"></div>
-      <div id="recentScore"></div>
-      
+    <nav class="score-container">
+      <div id="highScores" class="flex-center flex-column">
+        <table>
+        <h1 id="finalScore">High Scores</h1>
+        <ul id="highScoresList"></ul>
+        <a class="btn" href="/">Home</a>
+        
+        </table>
+      </div>
+
+<!-- IF WE ARE HARD CODING OR PUSHING w/ CREATION -->
+<!-- <tr>
+  <th>Rank</th>
+  <th>Name</th>
+  <th>Score</th>
+</tr>       -->
 
 
     </nav>
 
-  </header> 
-<!-- ADD A JSON Scoreboard?? -->
+  </header>
+  <!--ADD A JSON Scoreboard?? -->
   <script src="js/score-board.js"></script>
 </body>
+
 </html>
