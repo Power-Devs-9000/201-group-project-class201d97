@@ -1,14 +1,16 @@
 'use strict';
 
 //********** GLOBAL VARIABLES*/
-let questionListKeys = ['one', 'two', 'three', 'four', 'five'];
+let questionListKeys = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
 let userName = document.getElementById('user-information');
 let questionBox = document.getElementById('question-box');
 let answers = document.getElementById('solution-container');
-// let attempts = 0; // stretch goal
 let score = 0;
 let playerArray = [];
 
+// !! Stretch Goals
+// let attempts = 1;
+// let randomQuestion = Math.floor(Math.random() * questionListKeys.length);
 //********** CONSTRUCTOR FUNCTION(S) */
 
 function User(name) {
@@ -16,21 +18,20 @@ function User(name) {
   this.score = 0;
 }
 
-//!! RANDOM Q start-ish
 
 
 //********** HELPER FUNCTIONS*/
 
 // TODO: Create function to have an on click effect attached to TD elements within table
 let questionDisplay = document.createElement('h2');
+questionDisplay.id = 'questionDisplay';
 let questionIndex = 0;
 questionBox.appendChild(questionDisplay);
-// let randomQuestion = Math.floor(Math.random() * questionListKeys.length);
 
 function renderQuestion() {
   questionDisplay.textContent = questionList[questionListKeys[questionIndex]].question;
   // console.log(questionList);
-  renderAnswers(); // number that was generated to select question randomly
+  renderAnswers();
 }
 
 function renderAnswers() {
@@ -53,7 +54,7 @@ function renderAnswers() {
 // ****** FORM HANDLING */
 function handleFormSubmit(event) {
   event.preventDefault();
-  let userName = event.target.userName.value;
+  let Username = event.target.userName.value;
   console.log('user name submission working.');
 }
 
@@ -103,28 +104,115 @@ function handleFormSubmit(event) {
 // *** EVENT HANDLER*** */
 // TODO: Create function to have an on click effect attached to div elements within section
 
-let itemClicked = document.querySelector('div');
-
-console.log(questionIndex);
 function clickHandler(event) {
-  if (event.type === 'click') {
-    console.log(event.target.textContent);
-  }
-  if(questionIndex === 0 && event.target.textContent === 'b'){
+  console.log(event.target.textContent);
+  if(questionIndex === 0 && event.target.textContent === questionList.one.correct ){
     alert('Your guess for Q1 was correct!');
     score++;
-    console.log(`Your score is ${score}`);
+    console.log(`User score is ${score}`);
+    console.log(questionIndex);
+  } else if (questionIndex === 0 && event.target.textContent !== questionList.one.correct){
+    alert('sorry that was incorrect');
+    console.log(questionIndex);
   }
-  if(questionIndex === 1 && event.target.textContent === 'a2'){
+
+  if(questionIndex === 1 && event.target.textContent === questionList.two.correct){
     alert('Your guess for Q2 was correct!');
     score++;
-    console.log(`Your score is ${score}`);
+    console.log(`User score is ${score}`);
+    console.log(questionIndex);
+  } else if(questionIndex === 1 && event.target.textContent !== questionList.two.correct){
+    alert('Sorry that was incorrect!');
+    console.log(questionIndex);
   }
-  if(questionIndex < 5){
+
+  if(questionIndex === 2 && event.target.textContent === questionList.three.correct){
+    alert('Your guess for Q3 was correct!');
+    score++;
+    console.log(`User score is ${score}`);
+    console.log(questionIndex);
+  } else if (questionIndex === 2 && event.target.textContent !== questionList.three.correct){
+    alert('sorry that was incorrect!');
+    console.log(questionIndex);
+  }
+
+  if(questionIndex === 3 && event.target.textContent === questionList.four.correct){
+    alert('Your guess for Q4 was correct');
+    score++;
+    console.log(`User score is ${score}`);
+    console.log(questionIndex);
+  } else if (questionIndex === 3 && event.target.textContent !== questionList.four.correct){
+    alert('sorry that was incorrect!');
+    console.log(questionIndex);
+  }
+
+  if(questionIndex === 4 && event.target.textContent === questionList.five.correct){
+    alert('Your guess for Q4 was correct');
+    score++;
+    console.log(`User score is ${score}`);
+    console.log(questionIndex);
+  } else if (questionIndex === 4 && event.target.textContent !== questionList.five.correct){
+    alert('sorry that was incorrect!');
+  }
+
+  if(questionIndex === 5 && event.target.textContent === questionList.six.correct){
+    alert('Your guess for Q4 was correct');
+    score++;
+    console.log(`User score is ${score}`);
+    console.log(questionIndex);
+  } else if (questionIndex === 5 && event.target.textContent !== questionList.six.correct){
+    alert('sorry that was incorrect!');
+  }
+
+  if(questionIndex === 6 && event.target.textContent === questionList.seven.correct){
+    alert('Your guess for Q4 was correct');
+    score++;
+    console.log(`User score is ${score}`);
+    console.log(questionIndex);
+  } else if (questionIndex === 6 && event.target.textContent !== questionList.seven.correct){
+    alert('sorry that was incorrect!');
+  }
+
+  if(questionIndex === 7 && event.target.textContent === questionList.eight.correct){
+    alert('Your guess for Q4 was correct');
+    score++;
+    console.log(`User score is ${score}`);
+    console.log(questionIndex);
+  } else if (questionIndex === 7 && event.target.textContent !== questionList.eight.correct){
+    alert('sorry that was incorrect!');
+  }
+
+  if(questionIndex === 8 && event.target.textContent === questionList.nine.correct){
+    alert('Your guess for Q4 was correct');
+    score++;
+    console.log(`User score is ${score}`);
+    console.log(questionIndex);
+  } else if (questionIndex === 8 && event.target.textContent !== questionList.nine.correct){
+    alert('sorry that was incorrect!');
+  }
+
+  if(questionIndex === 9 && event.target.textContent === questionList.ten.correct){
+    alert('Your guess for Q4 was correct');
+    score++;
+    console.log(`User score is ${score}`);
+    console.log(questionIndex);
+  } else if (questionIndex === 8 && event.target.textContent !== questionList.ten.correct){
+    alert('sorry that was incorrect!');
+  }
+
+
+
+  if(questionIndex < 10){
     questionIndex++;
   }
 
-  console.dir(answers);
+  if(questionIndex >= 10){
+    document.querySelectorAll('#answerChoices').forEach(element => element.remove());
+    let gameOver = document.createElement('h1');
+    gameOver.textContent = 'Thank you for playing our game!';
+    answers.appendChild(gameOver);
+  }
+
   document.querySelectorAll('#answerChoices').forEach(element => element.remove()); // audrey told me to do it 2/28/23 @ 11:55
   renderQuestion();
 }
