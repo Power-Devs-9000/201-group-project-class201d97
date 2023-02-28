@@ -7,26 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/home.css">
 
   <title>Quiz Game</title>
 </head>
 
 <body>
-  <nav><a href="/pages/about-us.html">About Us</a></nav>
+  <div class="Section1">
+  <nav><a href="/pages/about-us.html" class = "button">About Us</a>
+  <!-- <nav><button type="button" >About Us<a href="/pages/about-us.html"></a></button></nav> -->
   <header>
     <h1>Welcome to.....</h1>
     <img id="game-logo" src="/img/game_title.png" alt="Can You Guess It? Game logo image">
     <ul>
       
-      <p><a href="score-board.js">Score Board</a></p>
+      <p><a href="pages/score-board.html">Score Board</a></p>
     </ul>
   </header>
 
   <main>
-  
+
         <form id="user-information">
           <fieldset>
             <legend>User Name</legend>
@@ -46,10 +48,13 @@
 
   </main>
   <footer>Copyright &copy Power Devs 9000</footer>
+
   <script src="js/questionAnsList.js"></script>
   <script src="js/home.js"></script>
   <!-- <script src="js/score-board.js"></script> -->
-
+  
+  <footer>Copyright &copy Power Devs 9000</footer>
+  
 </body>
 
 </html>
