@@ -46,9 +46,9 @@ let questionList = {
     correct: 'You can use Inline, Internal, or External styling method. An external link element is generally best practice, however.'
   },
   eight: {
-    question: 'Q5',
-    questionChoices: ['a2', 'b2', 'Rest well and dream of large women.', 'd2','e2'],
-    correct: 'a2'
+    question: 'How does local storage store data?',
+    questionChoices: ['You simply copy the data you wish to save for later and plop it into a Microsoft Word document.', 'It is quite simple, really. It just does.', 'Rest well and dream of large women.', 'It converts everything into ones and zeros which is puter talk for remember this forever please.','The keys and values are always stored in the UTF-16 string format. As with objects, integer keys are automatically converted to strings.'],
+    correct: 'The keys and values are always stored in the UTF-16 string format. As with objects, integer keys are automatically converted to strings.'
   },
   nine: {
     question: 'Q5',
