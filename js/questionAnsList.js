@@ -38,27 +38,27 @@ let questionList = {
   },
 
   six: {
-    question: 'Q4',
+    question: 'Q6',
     questionChoices: ['a2', 'b2', 'c2', 'd2','e2'],
     correct: 'a2'
   },
   seven: {
-    question: 'Q5',
+    question: 'Q7',
     questionChoices: ['a2', 'b2', 'c2', 'd2','e2'],
     correct: 'a2'
   },
   eight: {
-    question: 'Q5',
+    question: 'Q8',
     questionChoices: ['a2', 'b2', 'c2', 'd2','e2'],
     correct: 'a2'
   },
   nine: {
-    question: 'Q5',
+    question: 'Q9',
     questionChoices: ['a2', 'b2', 'c2', 'd2','e2'],
     correct: 'a2'
   },
   ten: {
-    question: 'Q5',
+    question: 'Q10',
     questionChoices: ['a2', 'b2', 'c2', 'd2','e2'],
     correct: 'a2'
   }
