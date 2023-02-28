@@ -19,6 +19,7 @@ let attempts = 0;
 let score = [];
 let question = document.getElementById('question-box');
 let answers = document.getElementById('solution-container');
+let playerArray = [];
 
 //********** CONSTRUCTOR FUNCTION(S) */
 
@@ -100,11 +101,11 @@ function handleFormSubmit(event) {
 // TODO: Convert data to a string and store it in local storage
 //if (attempts === 0) {
 //solutionContainer.removeEventListener('click', handler); // remove event listener
-//let stringifiedAnswer = JSON.stringify();
-//console.log('answer stringified >>>', stringifiedAnswer);
+//let stringifiedUsers = JSON.stringify(playerArray);
+//console.log('playerArray stringified >>>', stringifiedUsers);
 
 // TODO: Set stringifiedAnswer to local storage
-//localStorage.setItem('', stringifiedAnswer);
+//localStorage.setItem('playerArray', stringifiedUsers);
 //}
 
 // function handleShowScore() {
@@ -114,20 +115,22 @@ function handleFormSubmit(event) {
 //   }
 // }
 
-// TODO: Retrieve the stringified answers from local storage
-// let retrievedAnswer = localStorage.getItem('answer');
-// console.log('Retrieved Answer >>>', retrievedAnswer);
+// TODO: Retrieve the stringified user names from local storage
+// let retrievedUsers = localStorage.getItem('playerArray');
+// console.log('Retrieved User Name >>>', retrievedUsers);
 
-// TODO: Convert stringifiedAnswer back to usable code
-// let parsedAnswer = JSON.parse(retrievedAnswer);
-// console.log('Parsed Answer >>>', parsedAnswer);
+// TODO: Convert stringifiedUsers back to usable code
+// let parsedUsers = JSON.parse(retrievedUsers);
+// console.log('Parsed User Names >>>', parsedUsers);
 
 // ********** REBUILD W/CONSTRUCTOR FUNCTION **********
-if (retrievedAnswer) {
-  for (let i = 0; i < retrievedAnswer.length; i++) {
-    let reconstructedAnswer = new Answer (parsedAnswer[i].);
-  }
-}
+// if (retrievedUsers) {
+//   for (let i = 0; i < retrievedUsers.length; i++) {
+//     let reconstructedUsers = new User (parsedUsers[i].name);
+//     reconstructedUsers.score = parsedUsers[i].score;
+//     playerArray.push(reconstructedUsers);
+//   }
+// }
 
 //********** EXECUTABLE CODE */
 userName.addEventListener('submit', handleFormSubmit);
