@@ -10,8 +10,10 @@ let questionList = {
   two: {
     question: 'What would be the shorthand version of... const welcome = "You have logged in as " + first +" "+ last +" ".',
     
+
     questionChoices: ['`You + have logged + in as + First + Last', 'You have logged in as.exe.shorthand','`You have logged in as ${first} ${last}`', 'You have logged in as + "const.welcome" + "."' ],
     correct: '`You have logged in as ${first} ${last}`'
+
 
   },
 
