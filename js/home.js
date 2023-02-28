@@ -1,17 +1,6 @@
 'use strict';
 
 //********** GLOBAL VARIABLES*/
-let renderData = {
-  one: {
-    questionOne: 'This is our first test question',
-    questionOnechoices: ['a', 'b', 'c', 'd']
-  },
-
-  two: {
-    question: 'Q2',
-    questionTwochoices: ['a2, b2, c2, d2']
-  }
-};
 
 let answerCells = document.querySelectorAll('td');
 let userName = document.getElementById('user-information');
@@ -30,15 +19,8 @@ function User(name) {
 //!! RANDOM Q start-ish
 
 function randomQ() {
-  return Math.floor(Math.random() * renderData.length);
+  return Math.floor(Math.random() * questionList.length);
 }
-
-// function renderQuestion() {
-//   while (renderData.length < 5) {
-//     let randomAns = randomQ();
-
-//   }
-// };
 
 
 //********** HELPER FUNCTIONS*/
@@ -52,8 +34,8 @@ function selector (){
 
 function renderQuestion() {
   let questionDisplay = document.createElement('h2');
-  questionDisplay.textContent = renderData.one.questionOne;
-  console.log(renderData.questionOne);
+  questionDisplay.textContent = questionList.one.questionOne;
+  console.log(questionList.questionOne);
   question.appendChild(questionDisplay);
 }
 
@@ -61,9 +43,9 @@ function renderAnswers() {
   let answerRow = document.createElement('tr');
   answers.appendChild(answerRow);
 
-  for (let i = 0; i < renderData.one.questionOnechoices.length; i++) {
+  for (let i = 0; i < questionList.one.questionOnechoices.length; i++) {
     let answerChoices = document.createElement('td');
-    answerChoices.textContent = renderData.one.questionOnechoices[i];
+    answerChoices.textContent = questionList.one.questionOnechoices[i];
     answerRow.appendChild(answerChoices);
 
   }
@@ -83,16 +65,29 @@ function renderAnswers() {
 // }
 // };
 
-//****** FORM HANDLING */
+// ****** FORM HANDLING */
 function handleFormSubmit(event) {
   event.preventDefault();
+  let userName = event.target.userName.value;
   console.log('user name submission working.');
 }
 
-//*** EVENT HANDLER*** */
-// let ansSelected = event.target.questionOnechoices
+// *** EVENT HANDLER*** */
+// TODO: Create function to have an on click effect attached to div elements within section
 
-//********** EXECUTABLE CODE */
+let itemClicked = document.querySelector('div');
+
+function clickHandler(event) {
+  if (event.type === 'click') {
+    console.log('a div was clicked');
+  }
+  console.log(event.target.textContent);
+}
+
+answers.addEventListener('click', clickHandler);
+
+
+// ********** EXECUTABLE CODE */
 userName.addEventListener('submit', handleFormSubmit);
 selector();
 renderQuestion();
