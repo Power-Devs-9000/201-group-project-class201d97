@@ -1,13 +1,12 @@
 'use strict';
 
 //********** GLOBAL VARIABLES*/
-
-let answerCells = document.querySelectorAll('td');
+let questionListKeys = ['one', 'two', 'three', 'four', 'five'];
 let userName = document.getElementById('user-information');
-let attempts = 0;
-let score = [];
-let question = document.getElementById('question-box');
+let questionBox = document.getElementById('question-box');
 let answers = document.getElementById('solution-container');
+// let attempts = 0; // stretch goal
+let score = 0;
 let playerArray = [];
 
 //********** CONSTRUCTOR FUNCTION(S) */
@@ -19,52 +18,37 @@ function User(name) {
 
 //!! RANDOM Q start-ish
 
-function randomQ() {
-  return Math.floor(Math.random() * questionList.length);
-}
-
 
 //********** HELPER FUNCTIONS*/
-for (let tdCells of answerCells) {
-  tdCells.addEventListener('click', selector);
-}
+
 // TODO: Create function to have an on click effect attached to TD elements within table
-function selector() {
-  console.log('Click is working');
-}
+let questionDisplay = document.createElement('h2');
+let questionIndex = 0;
+questionBox.appendChild(questionDisplay);
+// let randomQuestion = Math.floor(Math.random() * questionListKeys.length);
 
 function renderQuestion() {
-  let questionDisplay = document.createElement('h2');
-  questionDisplay.textContent = questionList.one.questionOne;
-  console.log(questionList.questionOne);
-  question.appendChild(questionDisplay);
+  questionDisplay.textContent = questionList[questionListKeys[questionIndex]].question;
+  // console.log(questionList);
+  renderAnswers(); // number that was generated to select question randomly
 }
 
 function renderAnswers() {
-  let answerRow = document.createElement('tr');
-  answers.appendChild(answerRow);
 
-  for (let i = 0; i < questionList.one.questionOnechoices.length; i++) {
-    let answerChoices = document.createElement('td');
-    answerChoices.textContent = questionList.one.questionOnechoices[i];
-    answerRow.appendChild(answerChoices);
+  // console.log(questionList[questionListKeys[questionIndex]].questionChoices.length);
+  for (let i = 0; i < questionList[questionListKeys[questionIndex]].questionChoices.length; i++) {
+    let answerChoices = document.createElement('div');
+    answerChoices.id = 'answerChoices';
+    answerChoices.textContent = questionList[questionListKeys[questionIndex]].questionChoices[i]; //
+    answers.appendChild(answerChoices);
 
   }
+
 }
 
 
 //******* PROTOTYPE */
 
-// User.prototype.render = function () {
-// let answerRow = document.createElement('tr');
-// answers.appendChild(answerRow);
-
-// for (let i = 0; i <= 5; i++) {
-//   let answerChoices = document.createElement('td');
-//   answerChoices.textContent = 'test';
-//   answerRow.appendChild(answerChoices);
-// }
-// };
 
 // ****** FORM HANDLING */
 function handleFormSubmit(event) {
@@ -121,22 +105,39 @@ function handleFormSubmit(event) {
 
 let itemClicked = document.querySelector('div');
 
+console.log(questionIndex);
 function clickHandler(event) {
   if (event.type === 'click') {
-    console.log('a div was clicked');
+    console.log(event.target.textContent);
   }
-  console.log(event.target.textContent);
+  if(questionIndex === 0 && event.target.textContent === 'b'){
+    alert('Your guess for Q1 was correct!');
+    score++;
+    console.log(`Your score is ${score}`);
+  }
+  if(questionIndex === 1 && event.target.textContent === 'a2'){
+    alert('Your guess for Q2 was correct!');
+    score++;
+    console.log(`Your score is ${score}`);
+  }
+  if(questionIndex < 5){
+    questionIndex++;
+  }
+
+  console.dir(answers);
+  document.querySelectorAll('#answerChoices').forEach(element => element.remove()); // audrey told me to do it 2/28/23 @ 11:55
+  renderQuestion();
 }
 
-answers.addEventListener('click', clickHandler);
 
 
 
 // ********** EXECUTABLE CODE */
 userName.addEventListener('submit', handleFormSubmit);
-selector();
+answers.addEventListener('click', clickHandler);
+
 renderQuestion();
-renderAnswers();
+
 
 
 
