@@ -42,11 +42,11 @@ function randomQ() {
 
 
 //********** HELPER FUNCTIONS*/
-for(let tdCells of answerCells){
+for (let tdCells of answerCells) {
   tdCells.addEventListener('click', selector);
 }
 // TODO: Create function to have an on click effect attached to TD elements within table
-function selector (){
+function selector() {
   console.log('Click is working');
 }
 
@@ -91,6 +91,43 @@ function handleFormSubmit(event) {
 
 //*** EVENT HANDLER*** */
 // let ansSelected = event.target.questionOnechoices
+// console.dir(ansSelected); // prints the selected answer in console
+// for loop that iterates through the array of possible answers
+// attempts --; // decrease the number of attempts by 1
+// render function
+
+// ********** LOCAL STORAGE STARTS HERE **********
+// TODO: Convert data to a string and store it in local storage
+//if (attempts === 0) {
+//solutionContainer.removeEventListener('click', handler); // remove event listener
+//let stringifiedAnswer = JSON.stringify();
+//console.log('answer stringified >>>', stringifiedAnswer);
+
+// TODO: Set stringifiedAnswer to local storage
+//localStorage.setItem('', stringifiedAnswer);
+//}
+
+// function handleShowScore() {
+//   if attempts === 0) {
+//     scoreBtn.removeEventListener('click', handleShowScore);
+//     renderSomething();
+//   }
+// }
+
+// TODO: Retrieve the stringified answers from local storage
+// let retrievedAnswer = localStorage.getItem('answer');
+// console.log('Retrieved Answer >>>', retrievedAnswer);
+
+// TODO: Convert stringifiedAnswer back to usable code
+// let parsedAnswer = JSON.parse(retrievedAnswer);
+// console.log('Parsed Answer >>>', parsedAnswer);
+
+// ********** REBUILD W/CONSTRUCTOR FUNCTION **********
+if (retrievedAnswer) {
+  for (let i = 0; i < retrievedAnswer.length; i++) {
+    let reconstructedAnswer = new Answer (parsedAnswer[i].);
+  }
+}
 
 //********** EXECUTABLE CODE */
 userName.addEventListener('submit', handleFormSubmit);
