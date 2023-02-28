@@ -97,16 +97,16 @@ function handleFormSubmit(event) {
 // attempts --; // decrease the number of attempts by 1
 // render function
 
-// ********** LOCAL STORAGE STARTS HERE **********
-// TODO: Convert data to a string and store it in local storage
-//if (attempts === 0) {
-//solutionContainer.removeEventListener('click', handler); // remove event listener
-//let stringifiedUsers = JSON.stringify(playerArray);
-//console.log('playerArray stringified >>>', stringifiedUsers);
+//********** LOCAL STORAGE STARTS HERE **********
+//TODO: Convert data to a string and store it in local storage
+// if (attempts === 0) {
+// solutionContainer.removeEventListener('click', handler); // remove event listener
+// let stringifiedUsers = JSON.stringify(playerArray);
+// console.log('playerArray stringified >>>', stringifiedUsers);
 
-// TODO: Set stringifiedAnswer to local storage
-//localStorage.setItem('playerArray', stringifiedUsers);
-//}
+// //TODO: Set stringified user name to local storage
+// localStorage.setItem('playerArray', stringifiedUsers);
+// }
 
 // function handleShowScore() {
 //   if attempts === 0) {
@@ -115,15 +115,15 @@ function handleFormSubmit(event) {
 //   }
 // }
 
-// TODO: Retrieve the stringified user names from local storage
+// //TODO: Retrieve the stringified user names from local storage
 // let retrievedUsers = localStorage.getItem('playerArray');
 // console.log('Retrieved User Name >>>', retrievedUsers);
 
-// TODO: Convert stringifiedUsers back to usable code
+// //TODO: Convert stringifiedUsers back to usable code
 // let parsedUsers = JSON.parse(retrievedUsers);
 // console.log('Parsed User Names >>>', parsedUsers);
 
-// ********** REBUILD W/CONSTRUCTOR FUNCTION **********
+// //********** REBUILD W/CONSTRUCTOR FUNCTION **********
 // if (retrievedUsers) {
 //   for (let i = 0; i < retrievedUsers.length; i++) {
 //     let reconstructedUsers = new User (parsedUsers[i].name);
