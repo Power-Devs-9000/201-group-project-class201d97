@@ -8,14 +8,15 @@ let questionList = {
   },
 
   two: {
-    question: 'Q2',
-    questionChoices: ['a2', 'b2', 'c2', 'd2','e2'],
-    correct: 'a2'
+    question: 'What would be the shorthand version of... const welcome = "You have logged in as " + first +" "+ last +" ".',
+    
+    questionChoices: [a ='`You + have logged + in as + First + Last',b = 'You have logged in as.exe.shorthand',c = '`You have logged in as ${first} ${last}`',d = 'You have logged in as + "const.welcome" + "."' ],
+    correct: 'c'
   },
 
   three: {
     question: 'Q3',
-    questionChoices: ['a2', 'b2', 'c2', 'd2','e2'],
+    questionChoices: ['a2', 'b2', 'c2', 'd2',],
     correct: 'a2'
   },
 
