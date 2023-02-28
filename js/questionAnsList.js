@@ -10,8 +10,8 @@ let questionList = {
   two: {
     question: 'What would be the shorthand version of... const welcome = "You have logged in as " + first +" "+ last +" ".',
     
-    questionChoices: [a ='`You + have logged + in as + First + Last',b = 'You have logged in as.exe.shorthand',c = '`You have logged in as ${first} ${last}`',d = 'You have logged in as + "const.welcome" + "."' ],
-    correct: 'c'
+    questionChoices: ['`You + have logged + in as + First + Last', 'You have logged in as.exe.shorthand','`You have logged in as ${first} ${last}`', 'You have logged in as + "const.welcome" + "."' ],
+    correct: '`You have logged in as ${first} ${last}`'
 
   },
 
@@ -24,15 +24,15 @@ let questionList = {
   },
 
   four: {
-    question: 'Q4',
-    questionChoices: ['a2', 'b2', 'c2', 'd2','e2'],
-    correct: 'a2'
+    question: 'How would you remove the first element item from an array?',
+    questionChoices: [ 'Impossiblé!', 'the pop() method', 'the shift() method', 'the FM() method',],
+    correct: 'the shift() method'
   },
 
   five: {
-    question: 'Q5',
-    questionChoices: ['a2', 'b2', 'c2', 'd2','e2'],
-    correct: 'a2'
+    question: 'What is the difference between em and rem in CSS?',
+    questionChoices: ['They are totes the same obvi!', 'em is just shorthand for rem', 'em is relative to the font size of the parent and rem is relative to the font size of an html element.', 'em is a measurement for CSS to scale with the page size and rem is a measurement that does not allow scaling with the page size.'],
+    correct: 'em is relative to the font size of the parent and rem is relative to the font size of an html element.'
   },
 
   six: {
