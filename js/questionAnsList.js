@@ -3,8 +3,8 @@
 let questionList = {
   one: {
     question: 'What does HTML stand for?',
-    questionChoices: [a='Hyper Text Multiple Listing', b='Hyper Text Mark Up Language', c='Hyper Text Machine Lingo', d='Hyper Text Mass Linux','Hovering Text Manipulation Language'],
-    correct: 'b'
+    questionChoices: ['Hyper Text Multiple Listing', 'Hyper Text Mark Up Language', 'Hyper Text Machine Lingo', 'Hyper Text Mass Linux','Hovering Text Manipulation Language'],
+    correct: 'Hyper Text Mark Up Language'
   },
 
   two: {
@@ -15,7 +15,7 @@ let questionList = {
 
   three: {
     question: 'You have declared a function that takes in an array of numbers and returns the sum of those numbers. How do you get your function to run?',
-    questionTwochoices: ['Pick up one of those rocks, get behind a boulder. In a few minutes the man in black will come running around the bend. The minute his head is in view, hit it with the rock.', 'You have to get on spotify and play "Call Me, Maybe" by Carly Rae Jepsen on repeat.', 'The code inside of the function is automatically executed after the function has been defined.', 'The function must be called upon with a given set of arguments.', 'You only have to invoke functions that are nested within another function, and this is most certainly bad practice.'],
+    questionChoices: ['Pick up one of those rocks, get behind a boulder. In a few minutes the man in black will come running around the bend. The minute his head is in view, hit it with the rock.', 'You have to get on spotify and play "Call Me, Maybe" by Carly Rae Jepsen on repeat.', 'The code inside of the function is automatically executed after the function has been defined.', 'The function must be called upon with a given set of arguments.', 'You only have to invoke functions that are nested within another function, and this is most certainly bad practice.'],
     correct: 'The function must be called upon with a given set of arguments.'
   },
 
@@ -51,12 +51,12 @@ let questionList = {
   },
   nine: {
     question: 'The h1 tag is used to create:',
-    questionChoices: [a='Paragraphs', b='Colors', c='Cookies', d='Headings', e='Text'],
-    correct: 'd'
+    questionChoices: ['Paragraphs', 'Colors', 'Cookies', 'Headings', 'Text'],
+    correct: 'Headings'
   },
   ten: {
     question: 'Which property specifies the color of a border?',
-    questionChoices: [a=':border-color', b=':border-witdth', c=':border-style', d='border-line-color', e='border-rgb'],
-    correct: 'a'
+    questionChoices: [':border-color', ':border-width', ':border-style', 'border-line-color', 'border-rgb'],
+    correct: ':border-color'
   }
 };
