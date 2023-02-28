@@ -13,6 +13,8 @@ let renderData = {
   }
 };
 
+let answerCells = document.querySelectorAll('td');
+let userName = document.getElementById('user-information');
 let attempts = 0;
 let score = [];
 let question = document.getElementById('question-box');
@@ -25,11 +27,11 @@ function User(name) {
   this.score = 0;
 }
 
-!// RANDOM Q start-ish
+//!! RANDOM Q start-ish
 
-  function randomQ() {
-    return Math.floor(Math.random() * renderData.length);
-  }
+function randomQ() {
+  return Math.floor(Math.random() * renderData.length);
+}
 
 // function renderQuestion() {
 //   while (renderData.length < 5) {
@@ -40,7 +42,13 @@ function User(name) {
 
 
 //********** HELPER FUNCTIONS*/
-
+for(let tdCells of answerCells){
+  tdCells.addEventListener('click', selector);
+}
+// TODO: Create function to have an on click effect attached to TD elements within table
+function selector (){
+  console.log('Click is working');
+}
 
 function renderQuestion() {
   let questionDisplay = document.createElement('h2');
@@ -53,9 +61,9 @@ function renderAnswers() {
   let answerRow = document.createElement('tr');
   answers.appendChild(answerRow);
 
-  for (let i = 0; i < renderData.questionOnechoices.length; i++) {
+  for (let i = 0; i < renderData.one.questionOnechoices.length; i++) {
     let answerChoices = document.createElement('td');
-    answerChoices.textContent = renderData.questionOnechoices[i];
+    answerChoices.textContent = renderData.one.questionOnechoices[i];
     answerRow.appendChild(answerChoices);
 
   }
@@ -78,15 +86,15 @@ function renderAnswers() {
 //****** FORM HANDLING */
 function handleFormSubmit(event) {
   event.preventDefault();
+  console.log('user name submission working.');
 }
-for (let i = 0; i < answers.length; i++) {
-  if (question === answers[i].questionOnechoices) { }
-}
+
 //*** EVENT HANDLER*** */
-let ansSelected = event.target.questionOnechoices
+// let ansSelected = event.target.questionOnechoices
 
 //********** EXECUTABLE CODE */
-
+userName.addEventListener('submit', handleFormSubmit);
+selector();
 renderQuestion();
 renderAnswers();
 
