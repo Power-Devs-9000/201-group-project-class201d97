@@ -107,97 +107,83 @@ function handleFormSubmit(event) {
 function clickHandler(event) {
   console.log(event.target.textContent);
   if(questionIndex === 0 && event.target.textContent === questionList.one.correct ){
-    alert('Your guess for Q1 was correct!');
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
   } else if (questionIndex === 0 && event.target.textContent !== questionList.one.correct){
-    alert('sorry that was incorrect');
-    console.log(questionIndex);
+    alert('Sorry, that was incorrect');
   }
 
   if(questionIndex === 1 && event.target.textContent === questionList.two.correct){
-    alert('Your guess for Q2 was correct!');
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
   } else if(questionIndex === 1 && event.target.textContent !== questionList.two.correct){
-    alert('Sorry that was incorrect!');
-    console.log(questionIndex);
+    alert('Sorry, that was incorrect!');
   }
 
   if(questionIndex === 2 && event.target.textContent === questionList.three.correct){
-    alert('Your guess for Q3 was correct!');
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
   } else if (questionIndex === 2 && event.target.textContent !== questionList.three.correct){
-    alert('sorry that was incorrect!');
-    console.log(questionIndex);
+    alert('Sorry, that was incorrect!');
   }
 
   if(questionIndex === 3 && event.target.textContent === questionList.four.correct){
-    alert('Your guess for Q4 was correct');
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
   } else if (questionIndex === 3 && event.target.textContent !== questionList.four.correct){
-    alert('sorry that was incorrect!');
-    console.log(questionIndex);
+    alert('Sorry, that was incorrect!');
   }
 
   if(questionIndex === 4 && event.target.textContent === questionList.five.correct){
-    alert('Your guess for Q4 was correct');
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
   } else if (questionIndex === 4 && event.target.textContent !== questionList.five.correct){
-    alert('sorry that was incorrect!');
+    alert('Sorry, that was incorrect!');
   }
 
   if(questionIndex === 5 && event.target.textContent === questionList.six.correct){
-    alert('Your guess for Q4 was correct');
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
   } else if (questionIndex === 5 && event.target.textContent !== questionList.six.correct){
-    alert('sorry that was incorrect!');
+    alert('Sorry, that was incorrect!');
   }
 
   if(questionIndex === 6 && event.target.textContent === questionList.seven.correct){
-    alert('Your guess for Q4 was correct');
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
   } else if (questionIndex === 6 && event.target.textContent !== questionList.seven.correct){
-    alert('sorry that was incorrect!');
+    alert('Sorry, that was incorrect!');
   }
 
   if(questionIndex === 7 && event.target.textContent === questionList.eight.correct){
-    alert('Your guess for Q4 was correct');
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
   } else if (questionIndex === 7 && event.target.textContent !== questionList.eight.correct){
-    alert('sorry that was incorrect!');
+    alert('Sorry, that was incorrect!');
   }
 
   if(questionIndex === 8 && event.target.textContent === questionList.nine.correct){
-    alert('Your guess for Q4 was correct');
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
   } else if (questionIndex === 8 && event.target.textContent !== questionList.nine.correct){
-    alert('sorry that was incorrect!');
+    alert('Sorry, that was incorrect!');
   }
 
   if(questionIndex === 9 && event.target.textContent === questionList.ten.correct){
-    alert('Your guess for Q4 was correct');
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
   } else if (questionIndex === 8 && event.target.textContent !== questionList.ten.correct){
-    alert('sorry that was incorrect!');
+    alert('Sorry, that was incorrect!');
   }
 
 
