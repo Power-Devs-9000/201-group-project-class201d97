@@ -3,8 +3,8 @@
 let questionList = {
   one: {
     question: 'What does HTML stand for?',
-    questionChoices: [a='Hyper Text Multiple Listing', b='Hyper Text Mark Up Language', c='Hyper Text Machine Lingo', d='Hyper Text Mass Linux','Hovering Text Manipulation Language'],
-    correct: 'b'
+    questionChoices: ['Hyper Text Multiple Listing', 'Hyper Text Mark Up Language', 'Hyper Text Machine Lingo', 'Hyper Text Mass Linux','Hovering Text Manipulation Language'],
+    correct: 'Hyper Text Mark Up Language'
   },
 
   two: {
@@ -51,12 +51,12 @@ let questionList = {
   },
   nine: {
     question: 'The h1 tag is used to create:',
-    questionChoices: [a='Paragraphs', b='Colors', c='Cookies', d='Headings', e='Text'],
-    correct: 'd'
+    questionChoices: ['Paragraphs', 'Colors', 'Cookies', 'Headings', 'Text'],
+    correct: 'Headings'
   },
   ten: {
     question: 'Which property specifies the color of a border?',
-    questionChoices: [a=':border-color', b=':border-witdth', c=':border-style', d='border-line-color', e='border-rgb'],
-    correct: 'a'
+    questionChoices: [':border-color', ':border-witdth', ':border-style', 'border-line-color', 'border-rgb'],
+    correct: ':border-color'
   }
 };

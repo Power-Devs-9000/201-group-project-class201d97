@@ -6,7 +6,9 @@ let userName = document.getElementById('user-information');
 let questionBox = document.getElementById('question-box');
 let answers = document.getElementById('solution-container');
 let score = 0;
-let playerArray = [];
+
+let guestUser = new User('Ryan Eastman');
+
 
 // !! Stretch Goals
 // let attempts = 1;
@@ -18,6 +20,7 @@ function User(name) {
   this.score = 0;
 }
 
+storeData(guestUser);
 
 
 //********** HELPER FUNCTIONS*/
@@ -52,30 +55,49 @@ function renderAnswers() {
 
 
 // ****** FORM HANDLING */
-function handleFormSubmit(event) {
-  event.preventDefault();
-  let Username = event.target.userName.value;
-  console.log('user name submission working.');
-}
+// function handleFormSubmit(event) {
+//   event.preventDefault();
+//   let userName = event.target.userName.value;
+//   console.log('user name submission working.');
+// }
 
 
 //*** EVENT HANDLER*** */
 // let ansSelected = event.target.questionOnechoices
 // console.dir(ansSelected); // prints the selected answer in console
-// for loop that iterates through the array of possible answers
-// attempts --; // decrease the number of attempts by 1
-// render function
+//for loop that iterates through the array of possible answers
+// attempts--; // decrease the number of attempts by 1
+//render function
 
-// ********** LOCAL STORAGE STARTS HERE **********
-// TODO: Convert data to a string and store it in local storage
-// if (attempts === 0) {
-// solutionContainer.removeEventListener('click', handler); // remove event listener
-// let stringifiedUsers = JSON.stringify(playerArray);
-// console.log('playerArray stringified >>>', stringifiedUsers);
+//********** LOCAL STORAGE STARTS HERE **********
+//TODO: Convert data to a string and store it in local storage
 
-// //TODO: Set stringified user name to local storage
-// localStorage.setItem('playerArray', stringifiedUsers);
-// }
+function storeData(User) {
+  //if (attempts === 0) {
+  let stringifiedUsers = JSON.stringify(User);
+  //console.log('User stringified >>>', stringifiedUsers);
+
+  //TODO: Set stringified user name to local storage
+  localStorage.setItem('User', stringifiedUsers);
+}
+// TODO: If there is anything in LS, return that data
+function readData() { // What data is coming to us, what data can we manipulate
+  // if (retrievedUsers) {
+  //   for (let i = 0; i < retrievedUsers.length; i++) {
+  //     let reconstructedUsers = new User(parsedUsers[i].name);
+  //     reconstructedUsers.score = parsedUsers[i].score;
+  //     User.push(reconstructedUsers);
+  //   }
+  // }
+  let rawData = localStorage.getItem('User');
+  console.log(rawData);
+
+  let parsedData = JSON.parse(rawData);
+  console.log(parsedData);
+
+  return parsedData;
+}
+readData();
 
 // function handleShowScore() {
 //   if attempts === 0) {
@@ -84,129 +106,122 @@ function handleFormSubmit(event) {
 //   }
 // }
 
-// //TODO: Retrieve the stringified user names from local storage
-// let retrievedUsers = localStorage.getItem('playerArray');
+//TODO: Retrieve the stringified user names from local storage
+// let retrievedUsers = localStorage.getItem('playerArray'); // this is being done in my functions
 // console.log('Retrieved User Name >>>', retrievedUsers);
 
 // //TODO: Convert stringifiedUsers back to usable code
 // let parsedUsers = JSON.parse(retrievedUsers);
 // console.log('Parsed User Names >>>', parsedUsers);
 
-// //********** REBUILD W/CONSTRUCTOR FUNCTION **********
-// if (retrievedUsers) {
-//   for (let i = 0; i < retrievedUsers.length; i++) {
-//     let reconstructedUsers = new User (parsedUsers[i].name);
-//     reconstructedUsers.score = parsedUsers[i].score;
-//     playerArray.push(reconstructedUsers);
-//   }
-// }
+//********** REBUILD W/CONSTRUCTOR FUNCTION **********
 
 // *** EVENT HANDLER*** */
 // TODO: Create function to have an on click effect attached to div elements within section
 
 function clickHandler(event) {
   console.log(event.target.textContent);
-  if(questionIndex === 0 && event.target.textContent === questionList.one.correct ){
+  if (questionIndex === 0 && event.target.textContent === questionList.one.correct) {
     alert('Your guess for Q1 was correct!');
     score++;
     console.log(`User score is ${score}`);
     console.log(questionIndex);
-  } else if (questionIndex === 0 && event.target.textContent !== questionList.one.correct){
+  } else if (questionIndex === 0 && event.target.textContent !== questionList.one.correct) {
     alert('sorry that was incorrect');
     console.log(questionIndex);
   }
 
-  if(questionIndex === 1 && event.target.textContent === questionList.two.correct){
+  if (questionIndex === 1 && event.target.textContent === questionList.two.correct) {
     alert('Your guess for Q2 was correct!');
     score++;
     console.log(`User score is ${score}`);
     console.log(questionIndex);
-  } else if(questionIndex === 1 && event.target.textContent !== questionList.two.correct){
+  } else if (questionIndex === 1 && event.target.textContent !== questionList.two.correct) {
     alert('Sorry that was incorrect!');
     console.log(questionIndex);
   }
 
-  if(questionIndex === 2 && event.target.textContent === questionList.three.correct){
+  if (questionIndex === 2 && event.target.textContent === questionList.three.correct) {
     alert('Your guess for Q3 was correct!');
     score++;
     console.log(`User score is ${score}`);
     console.log(questionIndex);
-  } else if (questionIndex === 2 && event.target.textContent !== questionList.three.correct){
+  } else if (questionIndex === 2 && event.target.textContent !== questionList.three.correct) {
     alert('sorry that was incorrect!');
     console.log(questionIndex);
   }
 
-  if(questionIndex === 3 && event.target.textContent === questionList.four.correct){
+  if (questionIndex === 3 && event.target.textContent === questionList.four.correct) {
     alert('Your guess for Q4 was correct');
     score++;
     console.log(`User score is ${score}`);
     console.log(questionIndex);
-  } else if (questionIndex === 3 && event.target.textContent !== questionList.four.correct){
+  } else if (questionIndex === 3 && event.target.textContent !== questionList.four.correct) {
     alert('sorry that was incorrect!');
     console.log(questionIndex);
   }
 
-  if(questionIndex === 4 && event.target.textContent === questionList.five.correct){
+  if (questionIndex === 4 && event.target.textContent === questionList.five.correct) {
     alert('Your guess for Q4 was correct');
     score++;
     console.log(`User score is ${score}`);
     console.log(questionIndex);
-  } else if (questionIndex === 4 && event.target.textContent !== questionList.five.correct){
+  } else if (questionIndex === 4 && event.target.textContent !== questionList.five.correct) {
     alert('sorry that was incorrect!');
   }
 
-  if(questionIndex === 5 && event.target.textContent === questionList.six.correct){
+  if (questionIndex === 5 && event.target.textContent === questionList.six.correct) {
     alert('Your guess for Q4 was correct');
     score++;
     console.log(`User score is ${score}`);
     console.log(questionIndex);
-  } else if (questionIndex === 5 && event.target.textContent !== questionList.six.correct){
+  } else if (questionIndex === 5 && event.target.textContent !== questionList.six.correct) {
     alert('sorry that was incorrect!');
   }
 
-  if(questionIndex === 6 && event.target.textContent === questionList.seven.correct){
+  if (questionIndex === 6 && event.target.textContent === questionList.seven.correct) {
     alert('Your guess for Q4 was correct');
     score++;
     console.log(`User score is ${score}`);
     console.log(questionIndex);
-  } else if (questionIndex === 6 && event.target.textContent !== questionList.seven.correct){
+  } else if (questionIndex === 6 && event.target.textContent !== questionList.seven.correct) {
     alert('sorry that was incorrect!');
   }
 
-  if(questionIndex === 7 && event.target.textContent === questionList.eight.correct){
+  if (questionIndex === 7 && event.target.textContent === questionList.eight.correct) {
     alert('Your guess for Q4 was correct');
     score++;
     console.log(`User score is ${score}`);
     console.log(questionIndex);
-  } else if (questionIndex === 7 && event.target.textContent !== questionList.eight.correct){
+  } else if (questionIndex === 7 && event.target.textContent !== questionList.eight.correct) {
     alert('sorry that was incorrect!');
   }
 
-  if(questionIndex === 8 && event.target.textContent === questionList.nine.correct){
+  if (questionIndex === 8 && event.target.textContent === questionList.nine.correct) {
     alert('Your guess for Q4 was correct');
     score++;
     console.log(`User score is ${score}`);
     console.log(questionIndex);
-  } else if (questionIndex === 8 && event.target.textContent !== questionList.nine.correct){
+  } else if (questionIndex === 8 && event.target.textContent !== questionList.nine.correct) {
     alert('sorry that was incorrect!');
   }
 
-  if(questionIndex === 9 && event.target.textContent === questionList.ten.correct){
+  if (questionIndex === 9 && event.target.textContent === questionList.ten.correct) {
     alert('Your guess for Q4 was correct');
     score++;
     console.log(`User score is ${score}`);
     console.log(questionIndex);
-  } else if (questionIndex === 8 && event.target.textContent !== questionList.ten.correct){
+  } else if (questionIndex === 8 && event.target.textContent !== questionList.ten.correct) {
     alert('sorry that was incorrect!');
   }
 
 
 
-  if(questionIndex < 10){
+  if (questionIndex < 10) {
     questionIndex++;
   }
 
-  if(questionIndex >= 10){
+  if (questionIndex >= 10) {
     document.querySelectorAll('#answerChoices').forEach(element => element.remove());
     let gameOver = document.createElement('h1');
     gameOver.textContent = 'Thank you for playing our game!';
@@ -221,54 +236,7 @@ function clickHandler(event) {
 
 
 // ********** EXECUTABLE CODE */
-userName.addEventListener('submit', handleFormSubmit);
+//userName.addEventListener('submit', handleFormSubmit);
 answers.addEventListener('click', clickHandler);
 
 renderQuestion();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
