@@ -35,7 +35,6 @@ function startGame() {
   questionDisplay.id = 'questionDisplay';
   questionBox.appendChild(questionDisplay);
   renderQuestion();
-
   document.getElementById('intro').style.visibility = 'hidden';
 }
 
@@ -61,6 +60,7 @@ function renderAnswers() {
 //*** EVENT HANDLER*** */
 
 function handleStartGame() {
+  document.getElementById('startGame').style.visibility = 'hidden';
   startGame();
 }
 //********** LOCAL STORAGE STARTS HERE **********
@@ -227,7 +227,7 @@ function clickHandler(event) {
 
 
 // ********** EXECUTABLE CODE */
-userName.addEventListener('submit', handleFormSubmit);
+// userName.addEventListener('submit', handleFormSubmit);
 startBtn.addEventListener('click', handleStartGame);
 answers.addEventListener('click', clickHandler);
 userName.style.visibility = 'hidden'; // !! HIDE FORM AT START OF GAME, REAPPEAR AT COMPLETION
