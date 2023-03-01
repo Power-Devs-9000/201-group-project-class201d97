@@ -2,6 +2,7 @@
 
 //********** GLOBAL VARIABLES*/
 let questionListKeys = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+let questionDisplay = document.createElement('h2');
 let startBtn = document.getElementById('startGame');
 let userName = document.getElementById('user-information');
 let questionBox = document.getElementById('question-box');
@@ -28,26 +29,26 @@ storeData(guestUser);
 //********** HELPER FUNCTIONS*/
 
 function startGame() {
-  let questionDisplay = document.createElement('h2');
   questionDisplay.id = 'questionDisplay';
   questionBox.appendChild(questionDisplay);
   renderQuestion();
 
-  function renderQuestion() {
-    questionDisplay.textContent = questionList[questionListKeys[questionIndex]].question;
-    renderAnswers();
-  }
-  function renderAnswers() {
-    for (let i = 0; i < questionList[questionListKeys[questionIndex]].questionChoices.length; i++) {
-      let answerChoices = document.createElement('div');
-      answerChoices.id = 'answerChoices';
-      answerChoices.textContent = questionList[questionListKeys[questionIndex]].questionChoices[i]; //
-      answers.appendChild(answerChoices);
+  document.getElementById('intro').style.visibility = 'hidden';
+}
 
-    }
+function renderQuestion() {
+  questionDisplay.textContent = questionList[questionListKeys[questionIndex]].question;
+  renderAnswers();
+}
+function renderAnswers() {
+  for (let i = 0; i < questionList[questionListKeys[questionIndex]].questionChoices.length; i++) {
+    let answerChoices = document.createElement('div');
+    answerChoices.id = 'answerChoices';
+    answerChoices.textContent = questionList[questionListKeys[questionIndex]].questionChoices[i]; //
+    answers.appendChild(answerChoices);
 
   }
-  document.getElementById('intro').remove();
+
 }
 
 //******* PROTOTYPE */
@@ -56,7 +57,7 @@ function startGame() {
 
 //*** EVENT HANDLER*** */
 
-function handleStartGame(){
+function handleStartGame() {
   startGame();
 }
 //********** LOCAL STORAGE STARTS HERE **********
@@ -192,7 +193,6 @@ function clickHandler(event) {
   }
 
 
-
   if (questionIndex < 10) {
     questionIndex++;
   }
@@ -200,10 +200,11 @@ function clickHandler(event) {
   if (questionIndex >= 10) {
     document.querySelectorAll('#answerChoices').forEach(element => element.remove());
     let gameOver = document.createElement('h1');
-    gameOver.textContent = 'Thank you for playing our game!';
+    gameOver.textContent = 'Thank you for playing our game, please enter your name!';
     answers.appendChild(gameOver);
+    userName.style.visibility = 'visible';
+    questionDisplay.style.visibility = 'hidden';
   }
-
   document.querySelectorAll('#answerChoices').forEach(element => element.remove()); // audrey told me to do it 2/28/23 @ 11:55
   renderQuestion();
 }
@@ -221,5 +222,5 @@ function clickHandler(event) {
 //userName.addEventListener('submit', handleFormSubmit);
 startBtn.addEventListener('click', handleStartGame);
 answers.addEventListener('click', clickHandler);
-
+userName.style.visibility = 'hidden'; // !! HIDE FORM AT START OF GAME, REAPPEAR AT COMPLETION
 
