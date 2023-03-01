@@ -11,7 +11,10 @@ let score = 0;
 let questionIndex = 0;
 
 let guestUser = new User('Ryan Eastman');
+let player1 = new User('Reece');
+let player2 = new User('Logan');
 
+let playerArray = [guestUser, player1, player2];
 
 // !! Stretch Goals
 // let attempts = 1;
@@ -63,32 +66,37 @@ function handleStartGame() {
 //********** LOCAL STORAGE STARTS HERE **********
 //TODO: Convert data to a string and store it in local storage
 
-function storeData(User) {
+function storeData() {
   //if (attempts === 0) {
-  let stringifiedUsers = JSON.stringify(User);
+  let stringifiedUsers = JSON.stringify(playerArray);
   //console.log('User stringified >>>', stringifiedUsers);
 
   //TODO: Set stringified user name to local storage
-  localStorage.setItem('User', stringifiedUsers);
+  localStorage.setItem('playerArray', stringifiedUsers);
 }
+
+storeData();
 // TODO: If there is anything in LS, return that data
 function readData() { // What data is coming to us, what data can we manipulate
-  // if (retrievedUsers) {
-  //   for (let i = 0; i < retrievedUsers.length; i++) {
-  //     let reconstructedUsers = new User(parsedUsers[i].name);
-  //     reconstructedUsers.score = parsedUsers[i].score;
-  //     User.push(reconstructedUsers);
-  //   }
-  // }
-  let rawData = localStorage.getItem('User');
+  let rawData = localStorage.getItem('playerArray');
   console.log(rawData);
 
   let parsedData = JSON.parse(rawData);
   console.log(parsedData);
-
-  return parsedData;
+  //return parsedData;
+  // let tbody = document.createElement('tbody');
+  // for (let i = 0; i < parsedData.length; i++) {
+  //   let tr = '<tr>';
+  //   tr += '<td>Name</td>' + '<td>' + parsedData[i].name + '</td></tr>';
+  //   tr += '<td>Score</td>' + '<td>' + parsedData[i].score + '</td></tr>';
+  //   tbody.innerHTML += tr;
+  // }
 }
+
 readData();
+
+// *********** REBUILD USER USING CONSTRUCTOR **********
+
 
 // function handleShowScore() {
 //   if attempts === 0) {
@@ -219,7 +227,7 @@ function clickHandler(event) {
 
 
 // ********** EXECUTABLE CODE */
-//userName.addEventListener('submit', handleFormSubmit);
+userName.addEventListener('submit', handleFormSubmit);
 startBtn.addEventListener('click', handleStartGame);
 answers.addEventListener('click', clickHandler);
 userName.style.visibility = 'hidden'; // !! HIDE FORM AT START OF GAME, REAPPEAR AT COMPLETION
