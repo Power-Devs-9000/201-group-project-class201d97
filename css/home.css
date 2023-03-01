@@ -1,6 +1,6 @@
 body {
   margin: 0%;
-  padding: 0%;
+  height: 100%;
   font-family: 'Roboto';
 }
 
@@ -17,6 +17,10 @@ nav {
   font-weight: bold;
   font-size: 15px;
   text-decoration: none;
+  display:inline-block;
+  width: 150px;
+  margin: 4px 2px;
+  cursor: pointer;
   transition: .4s;
 }
 
@@ -26,18 +30,24 @@ ul {
     margin-right: 3.5%;
   }
 
-.Section1 {
+.bg {
   background:url(/img/img4.jpg);
-  background-size:cover;
-  /* background-attachment: */
+  height: 100%;
   background-position: center;
-  height: 1000px;
-  width: 1415px;
+  background-repeat: no-repeat;
+  background-size:cover;
+  width: 100%;
   text-align: center;
 }
 
-#game-logo{
+#game-logo {
   border-radius: 20%;
+}
+
+img {
+  border-radius: 20%;
+  max-width: 50%;
+  height:auto;
 }
 
 form{
@@ -53,7 +63,7 @@ h2{
 
 div{
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   padding: 10px
 
 }
@@ -70,5 +80,26 @@ legend {
 }
 
 form {
-  padding-top: 2.5%;
+  padding-top:2.5%;
+}
+
+article {
+  background-color: white;
+  color: black;
+  padding: 1px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+section {
+  background-color: rgb(0, 0, 0);
+  color: white;  
+  padding: 5px;
+  border: 10px solid black;
+  /* margin-top: 1px; */
+  align-items: center;
+}
+.solution-container {
+  border: 10px solid rgb(218, 18, 18);
+  padding: 10px;
 }
