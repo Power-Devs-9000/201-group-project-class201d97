@@ -47,7 +47,7 @@ function startGame() {
     }
 
   }
-  document.getElementById('intro').remove();
+  document.getElementById('intro').style.visibility = 'hidden';
 }
 
 //******* PROTOTYPE */
@@ -205,7 +205,7 @@ function clickHandler(event) {
   }
 
   document.querySelectorAll('#answerChoices').forEach(element => element.remove()); // audrey told me to do it 2/28/23 @ 11:55
-  renderQuestion();
+  startGame();
 }
 
 // ****** FORM HANDLING */
