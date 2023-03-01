@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+
+  <title>Quiz Game</title>
+</head>
+
+<body>
+  <div class="bg">
+  <nav><a href="/pages/about-us.html" class = "button">About Us</a>
+    <nav><a href="pages/score-board.html" class = "button">Score Board</a></nav>
+  
+  <header>
+    <img id="game-logo" src="/img/game_title.png" alt="Can You Guess It? Game logo image">
+    <h1 id="intro" style="font-size:2vw;">Welcome to our quiz game. The rules are simple. You have one chance to CLICK the correct answer that will appear below. Click the Start Game button when you are ready and good luck!</h1>
+    <ul>
+      
+
+
+    </ul>
+  </header>
+
+  <main>
+    <button id="startGame" type="submit" class="button">Start Game</button>
+
+    <article id="question-box"></article>
+
+      <section id="solution-container">
+
+      </section>
+      
+        <form id="user-information">
+          <fieldset>
+            <legend>User Name</legend>
+            <label for="">Enter your name here</label>
+            <input type="text" id="userName" name="userName">
+            <button type="submit" class="button">Submit</button>
+          </fieldset>
+        </form>
+      
+    
+
+
+  </main>
+ 
+  <script src="js/questionAnsList.js"></script>
+  <script src="js/home.js"></script>
+  
+  <footer>Copyright &copy Power Devs 9000</footer>
+  
+</body>
+
+</html>
