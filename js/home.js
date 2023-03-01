@@ -117,7 +117,7 @@ function clickHandler(event) {
     score++;
     console.log(`User score is ${score}`);
   } else if (questionIndex === 0 && event.target.textContent !== questionList.one.correct) {
-    alert('Sorry, that was incorrect');
+    alert('Sorry, the correct answer was Hyper Text Mark Up Language');
   }
 
   if (questionIndex === 1 && event.target.textContent === questionList.two.correct) {
@@ -125,7 +125,7 @@ function clickHandler(event) {
     score++;
     console.log(`User score is ${score}`);
   } else if (questionIndex === 1 && event.target.textContent !== questionList.two.correct) {
-    alert('Sorry, that was incorrect!');
+    alert('Sorry, the correct answer was `You have logged in as ${first} ${last}`!');
   }
 
   if (questionIndex === 2 && event.target.textContent === questionList.three.correct) {
@@ -133,7 +133,7 @@ function clickHandler(event) {
     score++;
     console.log(`User score is ${score}`);
   } else if (questionIndex === 2 && event.target.textContent !== questionList.three.correct) {
-    alert('Sorry, that was incorrect!');
+    alert('Sorry, the correct answer was The function must be called upon with a given set of arguments!');
   }
 
   if (questionIndex === 3 && event.target.textContent === questionList.four.correct) {
@@ -141,7 +141,7 @@ function clickHandler(event) {
     score++;
     console.log(`User score is ${score}`);
   } else if (questionIndex === 3 && event.target.textContent !== questionList.four.correct) {
-    alert('Sorry, that was incorrect!');
+    alert('Sorry, the correct answer was the shift() method!');
   }
 
   if (questionIndex === 4 && event.target.textContent === questionList.five.correct) {
@@ -149,7 +149,7 @@ function clickHandler(event) {
     score++;
     console.log(`User score is ${score}`);
   } else if (questionIndex === 4 && event.target.textContent !== questionList.five.correct) {
-    alert('Sorry, that was incorrect!');
+    alert('Sorry, the correct answer was em is relative to the font size of the parent and rem is relative to the font size of an html element!');
   }
 
   if (questionIndex === 5 && event.target.textContent === questionList.six.correct) {
@@ -157,7 +157,7 @@ function clickHandler(event) {
     score++;
     console.log(`User score is ${score}`);
   } else if (questionIndex === 5 && event.target.textContent !== questionList.six.correct) {
-    alert('Sorry, that was incorrect!');
+    alert('Sorry, the correct answer was When an element receives an event and that event is transmitted to its parent elements in the DOM tree until it gets to the root element!');
   }
 
   if (questionIndex === 6 && event.target.textContent === questionList.seven.correct) {
@@ -165,7 +165,7 @@ function clickHandler(event) {
     score++;
     console.log(`User score is ${score}`);
   } else if (questionIndex === 6 && event.target.textContent !== questionList.seven.correct) {
-    alert('Sorry, that was incorrect!');
+    alert('Sorry, the correct answer was You can use Inline, Internal, or External styling method. An external link file is generally best practice, however!');
   }
 
   if (questionIndex === 7 && event.target.textContent === questionList.eight.correct) {
@@ -173,7 +173,7 @@ function clickHandler(event) {
     score++;
     console.log(`User score is ${score}`);
   } else if (questionIndex === 7 && event.target.textContent !== questionList.eight.correct) {
-    alert('Sorry, that was incorrect!');
+    alert('Sorry, the correct answer was The keys and values are always stored in the UTF-16 string format. As with objects, integer keys are automatically converted to strings!');
   }
 
   if (questionIndex === 8 && event.target.textContent === questionList.nine.correct) {
@@ -181,7 +181,7 @@ function clickHandler(event) {
     score++;
     console.log(`User score is ${score}`);
   } else if (questionIndex === 8 && event.target.textContent !== questionList.nine.correct) {
-    alert('Sorry, that was incorrect!');
+    alert('Sorry, the correct answer was Headings!');
   }
 
   if (questionIndex === 9 && event.target.textContent === questionList.ten.correct) {
@@ -189,7 +189,7 @@ function clickHandler(event) {
     score++;
     console.log(`User score is ${score}`);
   } else if (questionIndex === 9 && event.target.textContent !== questionList.ten.correct) {
-    alert('Sorry, that was incorrect!');
+    alert('Sorry, the correct answer was :border-color !');
   }
 
 
