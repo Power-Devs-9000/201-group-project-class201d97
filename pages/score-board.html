@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Score Board</title>
   <link rel="score-board" href="pages/score-board.html">
-
-<body>
-
-
-</head>
   <link rel="stylesheet" href="css/score-board.css">
+  <title>Score Board</title>
 </head>
 
-
-
 <body>
-    <h1><a href="/index.html">Home</a></h1> 
+  <div class="scoreboardNav">
+    <a href="pages/index.html" class="button">Home</a>
+    <a href="/pages/about-us.html" class="button">About Us</a>
+    <header>
+      <h1>Score Board</h1>
 
-    <nav class="score-container">
-      <div id="highScores" class="flex-center flex-column">
-        <table>
-        <h1 id="finalScore">High Scores</h1>
-        <ul id="highScoresList"></ul>
+    </header>
+    <main>
 
-        <a class="btn" href="/">Home</a>
-        </table>
-      </div>
-    </nav>
- 
-  <script src="js/score-board.js"></script>
+
+      <nav class="score-container">
+        <div id="highScores" class="flex-center flex-column">
+          <table>
+            <h2 id="finalScore">High Scores</h2>
+            <ol id="highScoresList"></ol>
+
+
+          </table>
+        </div>
+      </nav>
+
+      <script src="js/home.js"></script>
+      <script src="js/score-board.js"></script>
+    </main>
+
+    <footer>
+      Copyright &copy Power Devs 9000
+    </footer>
 </body>
 
 

@@ -218,7 +218,7 @@ function clickHandler(event) {
 
 
 // ********** EXECUTABLE CODE */
-//userName.addEventListener('submit', handleFormSubmit);
+userName.addEventListener('submit', handleFormSubmit);
 startBtn.addEventListener('click', handleStartGame);
 answers.addEventListener('click', clickHandler);
 

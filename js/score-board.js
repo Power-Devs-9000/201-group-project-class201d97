@@ -13,3 +13,4 @@ highScoresList.innerHTML = highScores
   })
   .join('');
 finalScore.innerText = recentScore;
+
