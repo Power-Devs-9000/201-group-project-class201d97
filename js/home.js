@@ -53,6 +53,7 @@ function renderAnswers() {
 
 // ****** FORM HANDLING */
 function handleFormSubmit(event) {
+
   event.preventDefault();
   let Username = event.target.userName.value;
   console.log('user name submission working.');
@@ -60,6 +61,12 @@ function handleFormSubmit(event) {
 
 
 //*** EVENT HANDLER*** */
+function handleUsersubmit(event){
+
+  //**Identify when submit clicked for username */
+  let subClick = event.target.Username;
+  console.dir(subClick);
+}
 // let ansSelected = event.target.questionOnechoices
 // console.dir(ansSelected); // prints the selected answer in console
 // for loop that iterates through the array of possible answers
