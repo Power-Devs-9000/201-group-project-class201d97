@@ -67,10 +67,8 @@ function handleStartGame() {
 //TODO: Convert data to a string and store it in local storage
 
 function storeData() {
-  //if (attempts === 0) {
   let stringifiedUsers = JSON.stringify(playerArray);
   //console.log('User stringified >>>', stringifiedUsers);
-
   //TODO: Set stringified user name to local storage
   localStorage.setItem('playerArray', stringifiedUsers);
 }
@@ -83,37 +81,12 @@ function readData() { // What data is coming to us, what data can we manipulate
 
   let parsedData = JSON.parse(rawData);
   console.log(parsedData);
-  //return parsedData;
-  // let tbody = document.createElement('tbody');
-  // for (let i = 0; i < parsedData.length; i++) {
-  //   let tr = '<tr>';
-  //   tr += '<td>Name</td>' + '<td>' + parsedData[i].name + '</td></tr>';
-  //   tr += '<td>Score</td>' + '<td>' + parsedData[i].score + '</td></tr>';
-  //   tbody.innerHTML += tr;
-  // }
 }
 
 readData();
 
 // *********** REBUILD USER USING CONSTRUCTOR **********
-
-
-// function handleShowScore() {
-//   if attempts === 0) {
-//     scoreBtn.removeEventListener('click', handleShowScore);
-//     renderSomething();
-//   }
-// }
-
-//TODO: Retrieve the stringified user names from local storage
-// let retrievedUsers = localStorage.getItem('playerArray'); // this is being done in my functions
-// console.log('Retrieved User Name >>>', retrievedUsers);
-
-// //TODO: Convert stringifiedUsers back to usable code
-// let parsedUsers = JSON.parse(retrievedUsers);
-// console.log('Parsed User Names >>>', parsedUsers);
-
-//********** REBUILD W/CONSTRUCTOR FUNCTION **********
+// *********** probably don't need to do this **********
 
 // *** EVENT HANDLER*** */
 // TODO: Create function to have an on click effect attached to div elements within section
