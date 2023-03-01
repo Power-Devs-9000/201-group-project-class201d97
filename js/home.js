@@ -33,13 +33,10 @@ questionBox.appendChild(questionDisplay);
 
 function renderQuestion() {
   questionDisplay.textContent = questionList[questionListKeys[questionIndex]].question;
-  // console.log(questionList);
   renderAnswers();
 }
 
 function renderAnswers() {
-
-  // console.log(questionList[questionListKeys[questionIndex]].questionChoices.length);
   for (let i = 0; i < questionList[questionListKeys[questionIndex]].questionChoices.length; i++) {
     let answerChoices = document.createElement('div');
     answerChoices.id = 'answerChoices';
@@ -53,13 +50,6 @@ function renderAnswers() {
 
 //******* PROTOTYPE */
 
-
-// ****** FORM HANDLING */
-// function handleFormSubmit(event) {
-//   event.preventDefault();
-//   let userName = event.target.userName.value;
-//   console.log('user name submission working.');
-// }
 
 
 //*** EVENT HANDLER*** */
@@ -121,83 +111,83 @@ readData();
 
 function clickHandler(event) {
   console.log(event.target.textContent);
-  if(questionIndex === 0 && event.target.textContent === questionList.one.correct ){
+  if (questionIndex === 0 && event.target.textContent === questionList.one.correct) {
     alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-  } else if (questionIndex === 0 && event.target.textContent !== questionList.one.correct){
+  } else if (questionIndex === 0 && event.target.textContent !== questionList.one.correct) {
     alert('Sorry, that was incorrect');
   }
 
-  if(questionIndex === 1 && event.target.textContent === questionList.two.correct){
+  if (questionIndex === 1 && event.target.textContent === questionList.two.correct) {
     alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-  } else if(questionIndex === 1 && event.target.textContent !== questionList.two.correct){
+  } else if (questionIndex === 1 && event.target.textContent !== questionList.two.correct) {
     alert('Sorry, that was incorrect!');
   }
 
-  if(questionIndex === 2 && event.target.textContent === questionList.three.correct){
+  if (questionIndex === 2 && event.target.textContent === questionList.three.correct) {
     alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-  } else if (questionIndex === 2 && event.target.textContent !== questionList.three.correct){
+  } else if (questionIndex === 2 && event.target.textContent !== questionList.three.correct) {
     alert('Sorry, that was incorrect!');
   }
 
-  if(questionIndex === 3 && event.target.textContent === questionList.four.correct){
+  if (questionIndex === 3 && event.target.textContent === questionList.four.correct) {
     alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-  } else if (questionIndex === 3 && event.target.textContent !== questionList.four.correct){
+  } else if (questionIndex === 3 && event.target.textContent !== questionList.four.correct) {
     alert('Sorry, that was incorrect!');
   }
 
-  if(questionIndex === 4 && event.target.textContent === questionList.five.correct){
+  if (questionIndex === 4 && event.target.textContent === questionList.five.correct) {
     alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-  } else if (questionIndex === 4 && event.target.textContent !== questionList.five.correct){
+  } else if (questionIndex === 4 && event.target.textContent !== questionList.five.correct) {
     alert('Sorry, that was incorrect!');
   }
 
-  if(questionIndex === 5 && event.target.textContent === questionList.six.correct){
+  if (questionIndex === 5 && event.target.textContent === questionList.six.correct) {
     alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-  } else if (questionIndex === 5 && event.target.textContent !== questionList.six.correct){
+  } else if (questionIndex === 5 && event.target.textContent !== questionList.six.correct) {
     alert('Sorry, that was incorrect!');
   }
 
-  if(questionIndex === 6 && event.target.textContent === questionList.seven.correct){
+  if (questionIndex === 6 && event.target.textContent === questionList.seven.correct) {
     alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-  } else if (questionIndex === 6 && event.target.textContent !== questionList.seven.correct){
+  } else if (questionIndex === 6 && event.target.textContent !== questionList.seven.correct) {
     alert('Sorry, that was incorrect!');
   }
 
-  if(questionIndex === 7 && event.target.textContent === questionList.eight.correct){
+  if (questionIndex === 7 && event.target.textContent === questionList.eight.correct) {
     alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-  } else if (questionIndex === 7 && event.target.textContent !== questionList.eight.correct){
+  } else if (questionIndex === 7 && event.target.textContent !== questionList.eight.correct) {
     alert('Sorry, that was incorrect!');
   }
 
-  if(questionIndex === 8 && event.target.textContent === questionList.nine.correct){
+  if (questionIndex === 8 && event.target.textContent === questionList.nine.correct) {
     alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-  } else if (questionIndex === 8 && event.target.textContent !== questionList.nine.correct){
+  } else if (questionIndex === 8 && event.target.textContent !== questionList.nine.correct) {
     alert('Sorry, that was incorrect!');
   }
 
-  if(questionIndex === 9 && event.target.textContent === questionList.ten.correct){
+  if (questionIndex === 9 && event.target.textContent === questionList.ten.correct) {
     alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-  } else if (questionIndex === 8 && event.target.textContent !== questionList.ten.correct){
+  } else if (questionIndex === 9 && event.target.textContent !== questionList.ten.correct) {
     alert('Sorry, that was incorrect!');
   }
 
@@ -218,6 +208,12 @@ function clickHandler(event) {
   renderQuestion();
 }
 
+// ****** FORM HANDLING */
+// function handleFormSubmit(event) {
+//   event.preventDefault();
+//   let userName = event.target.userName.value;
+//   console.log('user name submission working.');
+// }
 
 
 
