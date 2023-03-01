@@ -39,8 +39,8 @@ let questionList = {
 
   seven: {
     question: 'How do you add your CSS styling to the HTML page?',
-    questionChoices: ['Mawwage. Mawwage is what bwings us togeva today. Mawwage, that bwessed awwangement, that dweam within a dweam.', 'You can use Inline, Internal, or External styling method. An external link element is generally best practice, however.', 'You just plop your CSS style sheet into a folder with the desired HTML document, and since they are neighbors, they will figure it out.', 'What even is CSS? Did you just make that up on the fly?','The only way to add styling to an HTML page is to ask ChatGPT to do it.'],
-    correct: 'You can use Inline, Internal, or External styling method. An external link element is generally best practice, however.'
+    questionChoices: ['Mawwage. Mawwage is what bwings us togeva today. Mawwage, that bwessed awwangement, that dweam within a dweam.', 'You can use Inline, Internal, or External styling method. An external link file is generally best practice, however.', 'You just plop your CSS style sheet into a folder with the desired HTML document, and since they are neighbors, they will figure it out.', 'What even is CSS? Did you just make that up on the fly?','The only way to add styling to an HTML page is to ask ChatGPT to do it.'],
+    correct: 'You can use Inline, Internal, or External styling method. An external link file is generally best practice, however.'
   },
 
   eight: {
