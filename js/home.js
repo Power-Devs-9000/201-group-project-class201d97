@@ -2,10 +2,12 @@
 
 //********** GLOBAL VARIABLES*/
 let questionListKeys = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+let startBtn = document.getElementById('startGame');
 let userName = document.getElementById('user-information');
 let questionBox = document.getElementById('question-box');
 let answers = document.getElementById('solution-container');
 let score = 0;
+let questionIndex = 0;
 
 let guestUser = new User('Ryan Eastman');
 
@@ -25,40 +27,38 @@ storeData(guestUser);
 
 //********** HELPER FUNCTIONS*/
 
-// TODO: Create function to have an on click effect attached to TD elements within table
-let questionDisplay = document.createElement('h2');
-questionDisplay.id = 'questionDisplay';
-let questionIndex = 0;
-questionBox.appendChild(questionDisplay);
+function startGame() {
+  let questionDisplay = document.createElement('h2');
+  questionDisplay.id = 'questionDisplay';
+  questionBox.appendChild(questionDisplay);
+  renderQuestion();
 
-function renderQuestion() {
-  questionDisplay.textContent = questionList[questionListKeys[questionIndex]].question;
-  renderAnswers();
-}
+  function renderQuestion() {
+    questionDisplay.textContent = questionList[questionListKeys[questionIndex]].question;
+    renderAnswers();
+  }
+  function renderAnswers() {
+    for (let i = 0; i < questionList[questionListKeys[questionIndex]].questionChoices.length; i++) {
+      let answerChoices = document.createElement('div');
+      answerChoices.id = 'answerChoices';
+      answerChoices.textContent = questionList[questionListKeys[questionIndex]].questionChoices[i]; //
+      answers.appendChild(answerChoices);
 
-function renderAnswers() {
-  for (let i = 0; i < questionList[questionListKeys[questionIndex]].questionChoices.length; i++) {
-    let answerChoices = document.createElement('div');
-    answerChoices.id = 'answerChoices';
-    answerChoices.textContent = questionList[questionListKeys[questionIndex]].questionChoices[i]; //
-    answers.appendChild(answerChoices);
+    }
 
   }
-
+  document.getElementById('intro').remove();
 }
-
 
 //******* PROTOTYPE */
 
 
 
 //*** EVENT HANDLER*** */
-// let ansSelected = event.target.questionOnechoices
-// console.dir(ansSelected); // prints the selected answer in console
-//for loop that iterates through the array of possible answers
-// attempts--; // decrease the number of attempts by 1
-//render function
 
+function handleStartGame(){
+  startGame();
+}
 //********** LOCAL STORAGE STARTS HERE **********
 //TODO: Convert data to a string and store it in local storage
 
@@ -219,6 +219,7 @@ function clickHandler(event) {
 
 // ********** EXECUTABLE CODE */
 //userName.addEventListener('submit', handleFormSubmit);
+startBtn.addEventListener('click', handleStartGame);
 answers.addEventListener('click', clickHandler);
 
-renderQuestion();
+
