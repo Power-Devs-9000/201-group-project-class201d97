@@ -12,8 +12,8 @@
 
 <body>
   <div class="scoreboardNav">
-    <a href="pages/index.html" class="button">Home</a>
-    <a href="/pages/about-us.html" class="button">About Us</a>
+    <a href="../index.html" class="button">Home</a>
+    <a href="about-us.html" class="button">About Us</a>
     <header>
       <h1>Score Board</h1>
 
@@ -23,17 +23,20 @@
 
       <nav class="score-container">
         <div id="highScores" class="flex-center flex-column">
+          <h2 id="finalScore">High Scores</h2>
+          <ol id="highScoresList"></ol>
           <table>
-            <h2 id="finalScore">High Scores</h2>
-            <ol id="highScoresList"></ol>
-
-
+            <tr>
+              <th>Player</th>
+              <th>Score</th>
+            </tr>
+          
           </table>
         </div>
       </nav>
 
-      <script src="js/home.js"></script>
-      <script src="js/score-board.js"></script>
+      
+      <script src="../js/score-board.js"></script>
     </main>
 
     <footer>
