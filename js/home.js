@@ -197,7 +197,7 @@ function clickHandler(event) {
     questionIndex++;
   }
 
-  if (questionIndex >= 10) {
+  if (questionIndex === 9) {
     document.querySelectorAll('#answerChoices').forEach(element => element.remove());
     let gameOver = document.createElement('h1');
     gameOver.textContent = 'Thank you for playing our game, please enter your name!';
@@ -205,7 +205,7 @@ function clickHandler(event) {
     userName.style.visibility = 'visible';
     questionDisplay.style.visibility = 'hidden';
   }
-  document.querySelectorAll('#answerChoices').forEach(element => element.remove()); // audrey told me to do it 2/28/23 @ 11:55
+  document.querySelectorAll('#answerChoices').forEach(element => element.remove()); // !! audrey told me to do it 2/28/23 @ 11:55
   renderQuestion();
 }
 
