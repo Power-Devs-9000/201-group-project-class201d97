@@ -121,98 +121,84 @@ readData();
 
 function clickHandler(event) {
   console.log(event.target.textContent);
-  if (questionIndex === 0 && event.target.textContent === questionList.one.correct) {
-    alert('Your guess for Q1 was correct!');
+  if(questionIndex === 0 && event.target.textContent === questionList.one.correct ){
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
-  } else if (questionIndex === 0 && event.target.textContent !== questionList.one.correct) {
-    alert('sorry that was incorrect');
-    console.log(questionIndex);
+  } else if (questionIndex === 0 && event.target.textContent !== questionList.one.correct){
+    alert('Sorry, that was incorrect');
   }
 
-  if (questionIndex === 1 && event.target.textContent === questionList.two.correct) {
-    alert('Your guess for Q2 was correct!');
+  if(questionIndex === 1 && event.target.textContent === questionList.two.correct){
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
-  } else if (questionIndex === 1 && event.target.textContent !== questionList.two.correct) {
-    alert('Sorry that was incorrect!');
-    console.log(questionIndex);
+  } else if(questionIndex === 1 && event.target.textContent !== questionList.two.correct){
+    alert('Sorry, that was incorrect!');
   }
 
-  if (questionIndex === 2 && event.target.textContent === questionList.three.correct) {
-    alert('Your guess for Q3 was correct!');
+  if(questionIndex === 2 && event.target.textContent === questionList.three.correct){
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
-  } else if (questionIndex === 2 && event.target.textContent !== questionList.three.correct) {
-    alert('sorry that was incorrect!');
-    console.log(questionIndex);
+  } else if (questionIndex === 2 && event.target.textContent !== questionList.three.correct){
+    alert('Sorry, that was incorrect!');
   }
 
-  if (questionIndex === 3 && event.target.textContent === questionList.four.correct) {
-    alert('Your guess for Q4 was correct');
+  if(questionIndex === 3 && event.target.textContent === questionList.four.correct){
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
-  } else if (questionIndex === 3 && event.target.textContent !== questionList.four.correct) {
-    alert('sorry that was incorrect!');
-    console.log(questionIndex);
+  } else if (questionIndex === 3 && event.target.textContent !== questionList.four.correct){
+    alert('Sorry, that was incorrect!');
   }
 
-  if (questionIndex === 4 && event.target.textContent === questionList.five.correct) {
-    alert('Your guess for Q4 was correct');
+  if(questionIndex === 4 && event.target.textContent === questionList.five.correct){
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
-  } else if (questionIndex === 4 && event.target.textContent !== questionList.five.correct) {
-    alert('sorry that was incorrect!');
+  } else if (questionIndex === 4 && event.target.textContent !== questionList.five.correct){
+    alert('Sorry, that was incorrect!');
   }
 
-  if (questionIndex === 5 && event.target.textContent === questionList.six.correct) {
-    alert('Your guess for Q4 was correct');
+  if(questionIndex === 5 && event.target.textContent === questionList.six.correct){
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
-  } else if (questionIndex === 5 && event.target.textContent !== questionList.six.correct) {
-    alert('sorry that was incorrect!');
+  } else if (questionIndex === 5 && event.target.textContent !== questionList.six.correct){
+    alert('Sorry, that was incorrect!');
   }
 
-  if (questionIndex === 6 && event.target.textContent === questionList.seven.correct) {
-    alert('Your guess for Q4 was correct');
+  if(questionIndex === 6 && event.target.textContent === questionList.seven.correct){
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
-  } else if (questionIndex === 6 && event.target.textContent !== questionList.seven.correct) {
-    alert('sorry that was incorrect!');
+  } else if (questionIndex === 6 && event.target.textContent !== questionList.seven.correct){
+    alert('Sorry, that was incorrect!');
   }
 
-  if (questionIndex === 7 && event.target.textContent === questionList.eight.correct) {
-    alert('Your guess for Q4 was correct');
+  if(questionIndex === 7 && event.target.textContent === questionList.eight.correct){
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
-  } else if (questionIndex === 7 && event.target.textContent !== questionList.eight.correct) {
-    alert('sorry that was incorrect!');
+  } else if (questionIndex === 7 && event.target.textContent !== questionList.eight.correct){
+    alert('Sorry, that was incorrect!');
   }
 
-  if (questionIndex === 8 && event.target.textContent === questionList.nine.correct) {
-    alert('Your guess for Q4 was correct');
+  if(questionIndex === 8 && event.target.textContent === questionList.nine.correct){
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
-  } else if (questionIndex === 8 && event.target.textContent !== questionList.nine.correct) {
-    alert('sorry that was incorrect!');
+  } else if (questionIndex === 8 && event.target.textContent !== questionList.nine.correct){
+    alert('Sorry, that was incorrect!');
   }
 
-  if (questionIndex === 9 && event.target.textContent === questionList.ten.correct) {
-    alert('Your guess for Q4 was correct');
+  if(questionIndex === 9 && event.target.textContent === questionList.ten.correct){
+    alert('That was CORRECT!');
     score++;
     console.log(`User score is ${score}`);
-    console.log(questionIndex);
-  } else if (questionIndex === 8 && event.target.textContent !== questionList.ten.correct) {
-    alert('sorry that was incorrect!');
+  } else if (questionIndex === 8 && event.target.textContent !== questionList.ten.correct){
+    alert('Sorry, that was incorrect!');
   }
 
 
