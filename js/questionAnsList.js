@@ -36,13 +36,13 @@ let questionList = {
     questionChoices: ['When an element receives an event and that event is transmitted to its parent elements in the DOM tree until it gets to the root element.', 'Event Bubbling happens when you invoke a nested function that resides within another function.', 'This is the process that dictates how elements should be rendered on screen.', 'Event Bubbling takes place when the arguments passed within a function spill out of the parentheses and leak into the curly brackets.','You keep using that word. I do not think it means what you think it means.'],
     correct: 'When an element receives an event and that event is transmitted to its parent elements in the DOM tree until it gets to the root element.'
   },
-  
+
   seven: {
     question: 'How do you add your CSS styling to the HTML page?',
     questionChoices: ['Mawwage. Mawwage is what bwings us togeva today. Mawwage, that bwessed awwangement, that dweam within a dweam.', 'You can use Inline, Internal, or External styling method. An external link element is generally best practice, however.', 'You just plop your CSS style sheet into a folder with the desired HTML document, and since they are neighbors, they will figure it out.', 'What even is CSS? Did you just make that up on the fly?','The only way to add styling to an HTML page is to ask ChatGPT to do it.'],
     correct: 'You can use Inline, Internal, or External styling method. An external link element is generally best practice, however.'
   },
-  
+
   eight: {
     question: 'How does local storage store data?',
     questionChoices: ['You simply copy the data you wish to save for later and plop it into a Microsoft Word document.', 'It is quite simple, really. It just does.', 'Rest well and dream of large women.', 'It converts everything into ones and zeros which is puter talk for remember this forever please.','The keys and values are always stored in the UTF-16 string format. As with objects, integer keys are automatically converted to strings.'],
@@ -56,7 +56,7 @@ let questionList = {
   },
   ten: {
     question: 'Which property specifies the color of a border?',
-    questionChoices: [':border-color', ':border-width', ':border-style', 'border-line-color', 'border-rgb'],
+    questionChoices: [':border-color', ':border-witdth', ':border-style', 'border-line-color', 'border-rgb'],
     correct: ':border-color'
   }
 };
