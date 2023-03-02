@@ -267,6 +267,7 @@ function handleFormSubmit(event) {
   let scoreStore = { score, userName };
   playerArray.push(scoreStore);
   storeData();
+  document.getElementById('user-information').reset();
 }
 
 // ********** EXECUTABLE CODE */
