@@ -213,7 +213,7 @@ function clickHandler(event) {
     questionIndex === 9 &&
     event.target.textContent !== questionList.ten.correct
   ) {
-    alert('Sorry, the correct answer was :border-color !');
+    alert('Sorry, the correct answer was :border-color!');
   }
 
   if (questionIndex < 10) {
