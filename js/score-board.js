@@ -1,3 +1,4 @@
+'use strict';
 // *********** JS DATA THAT POPULATES THE TABLE ***********
 
 let retrievedUsers = JSON.parse(localStorage.getItem('playerArray'));
