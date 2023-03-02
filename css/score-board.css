@@ -1,42 +1,36 @@
-/* * {
-  background:linear-gradient(#f1c50e, #db545a);
+body {
+  background-image: linear-gradient(#f1c50e, #db545a);
+}
+header{
   text-align: center;
 }
-body {
-  margin: 0%;
-  padding: 0%;
-  font-family: 'Roboto';
-}
-
-nav {
-  padding: 2%;
-}
- */
-
-.score-container {
+title{
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+
+}
+
+.score-board{
+  position: static;
+  top: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+
+.final-score{
+  display: flex;
+  justify-content: center;
+  align-items: top;
   height: 100em;
 }
-
-#highScoresList {
-  list-style-type: disc;
-  padding-left: 0;
-  margin-bottom: 4em;
-
-}
-
-.high-score{
-  font-size: 3em;
-  margin-bottom: 1em;
-}
-
-
-.high-score:hover {
-  transform: scale(2);
-}
-
 
 .button {
   border: none;
@@ -52,30 +46,25 @@ nav {
 
 
 table {
-font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-font-size: 14px;
-border-radius: 10px;
-border-spacing: 0;
-text-align: center;
-}
-
-/* 
-
-#highScores {
-}
-h1 {
-
-  color: white;
-  margin-bottom: 7px;
-  font-size: 20px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  border-radius: 10px;
+  border-spacing: 0;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 
 th {
+align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+text-align: center;
 background: skyblue;
 padding: 10px 20px;
-  color: blue;
+color: blue;
 }
 
 th, tr {
@@ -115,7 +104,7 @@ tr td:last-child {
 border-right: none;
 
 } 
- */
+
 
 
 

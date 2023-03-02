@@ -10,38 +10,36 @@
 </head>
 
 <body>
-  <div class="scoreboardNav">
+  <div class="score-board">
     <a href="../index.html" class="button">Home</a>
     <a href="about-us.html" class="button">About Us</a>
     <header>
-      <h1>Score Board</h1>
-
+      <h1 id="finalScore">Score Board</h1>
+      
     </header>
+    <!-- <div class="Player">Player</div>
+    <div class="Score">Score</div> -->
     <main>
 
 
-      <nav class="score-container">
-        <div id="highScores" class="flex-center flex-column">
-          <h2 id="finalScore">High Scores</h2>
-          <ol id="highScoresList"></ol>
-          <table>
-            <tr>
-              <th>Player</th>
-              <th>Score</th>
-            </tr>
-          
-          </table>
-        </div>
-      </nav>
-
       
-      <script src="../js/score-board.js"></script>
+      <div id="highScores">
+        <table>
+          <tr>
+            <th>Player</th>
+            <th>Score</th>
+          </tr>
+        </table>
+      </div>
+      
     </main>
-
+    
     <footer>
       Copyright &copy Power Devs 9000
     </footer>
-</body>
-
-
-</html>
+    
+    <script src="../js/score-board.js"></script>
+  </body>
+  
+  
+  </html>
