@@ -52,6 +52,7 @@ function renderAnswers() {
 }
 
 //********** LOCAL STORAGE STARTS HERE **********
+
 function storeData() {
   let stringifiedUsers = JSON.stringify(playerArray);
   localStorage.setItem('playerArray', stringifiedUsers);
