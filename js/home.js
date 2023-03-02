@@ -224,10 +224,11 @@ function clickHandler(event) {
   if (questionIndex === 10) {
     document.querySelectorAll('#answerChoices').forEach((element) => element.remove());
     let gameOver = document.createElement('h1');
-    gameOver.textContent = 'Thank you for playing our game, please enter your name! Then check the Score Board above to see how you placed!';
+    gameOver.textContent = 'Thank you for playing our game, please enter your name! Then check the Score Board above to see how you did!';
     answers.appendChild(gameOver);
     userName.style.visibility = 'visible';
     questionDisplay.style.visibility = 'hidden';
+    questionBox.style.visibility = 'hidden';
 
   } else {
     document.querySelectorAll('#answerChoices').forEach(element => element.remove()); // !! audrey told me to do it 2/28/23 @ 11:55
