@@ -1,4 +1,4 @@
-* {
+/* * {
   background:linear-gradient(#f1c50e, #db545a);
   text-align: center;
 }
@@ -11,7 +11,7 @@ body {
 nav {
   padding: 2%;
 }
-
+ */
 
 .score-container {
   display: flex;
@@ -59,10 +59,10 @@ border-spacing: 0;
 text-align: center;
 }
 
-
+/* 
 
 #highScores {
-
+}
 h1 {
 
   color: white;
@@ -115,7 +115,7 @@ tr td:last-child {
 border-right: none;
 
 } 
-
+ */
 
 
 
