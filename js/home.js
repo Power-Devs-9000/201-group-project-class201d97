@@ -43,7 +43,7 @@ function renderQuestion() {
   renderAnswers();
 }
 function renderAnswers() {
-  for (let i = 0;i < questionList[questionListKeys[questionIndex]].questionChoices.length;i++) {
+  for (let i = 0; i < questionList[questionListKeys[questionIndex]].questionChoices.length; i++) {
     let answerChoices = document.createElement('div');
     answerChoices.id = 'answerChoices';
     answerChoices.textContent = questionList[questionListKeys[questionIndex]].questionChoices[i];
@@ -54,19 +54,22 @@ function renderAnswers() {
 //********** LOCAL STORAGE STARTS HERE **********
 
 function storeData() {
+  let dataStored = readData();
+  if (dataStored) {
+    for (let i = 0; i < dataStored.length; i++) {
+      playerArray.push(dataStored[i]);
+    }
+  }
   let stringifiedUsers = JSON.stringify(playerArray);
   localStorage.setItem('playerArray', stringifiedUsers);
 }
 
 function readData() {
   let rawData = localStorage.getItem('playerArray');
-  console.log(rawData);
-
   let parsedData = JSON.parse(rawData);
-  console.log(parsedData);
+  return parsedData;
 }
 
-readData();
 
 // ******* EVENT HANDLER ********/
 function handleStartGame() {
@@ -77,7 +80,6 @@ function handleStartGame() {
 }
 
 function clickHandler(event) {
-  console.log(event.target.textContent);
   if (
     questionIndex === 0 &&
     event.target.textContent === questionList.one.correct
@@ -229,7 +231,7 @@ function clickHandler(event) {
     userName.style.visibility = 'visible';
     questionDisplay.style.visibility = 'hidden';
     questionBox.style.visibility = 'hidden';
-
+    answers.removeEventListener('click', clickHandler);//trying to prevent h1 repopulating on click
   } else {
     document.querySelectorAll('#answerChoices').forEach(element => element.remove()); // !! audrey told me to do it 2/28/23 @ 11:55
     renderQuestion();
