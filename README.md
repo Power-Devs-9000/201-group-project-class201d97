@@ -32,5 +32,6 @@ Our project is a quiz style matching game.  We will present the user with a ques
 ## References
 
 - Audrey Patterson, 201 Instructor at Code Fellows Seattle.  She assisted in solving part of our JS logic and helped with rendering our website properly to our live page.  She was also the inspiration for some of our CSS on our about us page.
-- For our CSS design on our scoreboard we used [CodePen reference](https://codepen.io/arkadievvladimir/pen/JjKwrzy).
-- 
+- Rhett Trom helped with storing our local data and transferring it to another page for display purposes.
+- For our CSS design on our scoreboard we used [CodePen reference](https://codepen.io/arkadievvladimir/pen/JjKwrzy) and a [YouTube Tutorial](https://www.youtube.com/watch?v=phWxA89Dy94&t=192s).
+- The entire team utilized documentation from the [MDN Docs](https://developer.mozilla.org/en-US/) and [W3Schools](https://www.w3schools.com/).
