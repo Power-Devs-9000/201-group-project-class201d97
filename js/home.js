@@ -2,22 +2,22 @@
 
 //********** GLOBAL VARIABLES*/
 let questionListKeys = [
-  "one",
-  "two",
-  "three",
-  "four",
-  "five",
-  "six",
-  "seven",
-  "eight",
-  "nine",
-  "ten",
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine',
+  'ten',
 ];
-let questionDisplay = document.createElement("h2");
-let startBtn = document.getElementById("startGame");
-let userName = document.getElementById("user-information");
-let questionBox = document.getElementById("question-box");
-let answers = document.getElementById("solution-container");
+let questionDisplay = document.createElement('h2');
+let startBtn = document.getElementById('startGame');
+let userName = document.getElementById('user-information');
+let questionBox = document.getElementById('question-box');
+let answers = document.getElementById('solution-container');
 let score = 0;
 let questionIndex = 0;
 let playerArray = [];
@@ -35,10 +35,10 @@ function User(name) {
 //********** HELPER FUNCTIONS*/
 
 function startGame() {
-  questionDisplay.id = "questionDisplay";
+  questionDisplay.id = 'questionDisplay';
   questionBox.appendChild(questionDisplay);
   renderQuestion();
-  document.getElementById("intro").style.visibility = "hidden";
+  document.getElementById('intro').style.visibility = 'hidden';
 }
 
 function renderQuestion() {
@@ -52,8 +52,8 @@ function renderAnswers() {
     i < questionList[questionListKeys[questionIndex]].questionChoices.length;
     i++
   ) {
-    let answerChoices = document.createElement("div");
-    answerChoices.id = "answerChoices";
+    let answerChoices = document.createElement('div');
+    answerChoices.id = 'answerChoices';
     answerChoices.textContent =
       questionList[questionListKeys[questionIndex]].questionChoices[i]; //
     answers.appendChild(answerChoices);
@@ -65,7 +65,7 @@ function renderAnswers() {
 //*** EVENT HANDLER*** */
 
 function handleStartGame() {
-  document.getElementById("startGame").style.visibility = "hidden";
+  document.getElementById('startGame').style.visibility = 'hidden';
   startGame();
 }
 //********** LOCAL STORAGE STARTS HERE **********
@@ -75,14 +75,14 @@ function storeData() {
   let stringifiedUsers = JSON.stringify(playerArray);
   //console.log('User stringified >>>', stringifiedUsers);
   //TODO: Set stringified user name to local storage
-  localStorage.setItem("playerArray", stringifiedUsers);
+  localStorage.setItem('playerArray', stringifiedUsers);
 }
 
 // storeData();
 // TODO: If there is anything in LS, return that data
 function readData() {
   // What data is coming to us, what data can we manipulate
-  let rawData = localStorage.getItem("playerArray");
+  let rawData = localStorage.getItem('playerArray');
   console.log(rawData);
 
   let parsedData = JSON.parse(rawData);
@@ -243,23 +243,23 @@ function clickHandler(event) {
     questionIndex++;
   }
 
-  if (questionIndex >= 10) {
-    document
-      .querySelectorAll("#answerChoices")
-      .forEach((element) => element.remove());
-    let gameOver = document.createElement("h1");
-    gameOver.textContent =
-      "Thank you for playing our game, please enter your name!";
-    answers.appendChild(gameOver);
-    userName.style.visibility = "visible";
-    questionDisplay.style.visibility = "hidden";
+  if (questionIndex === 9) {
+    document.querySelectorAll('#answerChoices').forEach(element => element.remove());
+    let gameOver = document.createElement('h1');
+    gameOver.textContent = 'Thank you for playing our game, please enter your name!';
   }
-  document
-    .querySelectorAll("#answerChoices")
-    .forEach((element) => element.remove()); // audrey told me to do it 2/28/23 @ 11:55
+  if (questionIndex >= 10) {
+    document.querySelectorAll('#answerChoices').forEach((element) => element.remove());
+    let gameOver = document.createElement('h1');
+    gameOver.textContent = 'Thank you for playing our game, please enter your name!';
+    answers.appendChild(gameOver);
+    userName.style.visibility = 'visible';
+    questionDisplay.style.visibility = 'hidden';
+  }
+  document.querySelectorAll('#answerChoices').forEach(element => element.remove()); // !! audrey told me to do it 2/28/23 @ 11:55
   renderQuestion();
-}
 
+}
 // ****** FORM HANDLING */
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -270,7 +270,8 @@ function handleFormSubmit(event) {
 }
 
 // ********** EXECUTABLE CODE */
-userName.addEventListener("submit", handleFormSubmit);
-startBtn.addEventListener("click", handleStartGame);
-answers.addEventListener("click", clickHandler);
-userName.style.visibility = "hidden"; // !! HIDE FORM AT START OF GAME, REAPPEAR AT COMPLETION
+userName.addEventListener('submit', handleFormSubmit);
+startBtn.addEventListener('click', handleStartGame);
+answers.addEventListener('click', clickHandler);
+userName.style.visibility = 'hidden'; // !! HIDE FORM AT START OF GAME, REAPPEAR AT COMPLETION
+
