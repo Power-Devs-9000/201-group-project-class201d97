@@ -69,19 +69,13 @@ function handleStartGame() {
   startGame();
 }
 //********** LOCAL STORAGE STARTS HERE **********
-//TODO: Convert data to a string and store it in local storage
 
 function storeData() {
   let stringifiedUsers = JSON.stringify(playerArray);
-  //console.log('User stringified >>>', stringifiedUsers);
-  //TODO: Set stringified user name to local storage
   localStorage.setItem('playerArray', stringifiedUsers);
 }
 
-// storeData();
-// TODO: If there is anything in LS, return that data
 function readData() {
-  // What data is coming to us, what data can we manipulate
   let rawData = localStorage.getItem('playerArray');
   console.log(rawData);
 
@@ -90,9 +84,6 @@ function readData() {
 }
 
 readData();
-
-// *********** REBUILD USER USING CONSTRUCTOR **********
-// *********** probably don't need to do this **********
 
 // *** EVENT HANDLER*** */
 // TODO: Create function to have an on click effect attached to div elements within section
