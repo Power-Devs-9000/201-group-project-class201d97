@@ -16,6 +16,20 @@ header{
   
 }
 
+.button {
+  font-family: 'Roboto';
+  border: none;
+  background: rgb(255, 0, 0);
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  transition: .4s;
+}
+
+
 #logan-section > img {
   height: 400px;
   width: 400px;
