@@ -1,5 +1,5 @@
 'use strict';
-// variable being called on home.js
+
 let questionList = {
   one: {
     question: 'What does HTML stand for?',
